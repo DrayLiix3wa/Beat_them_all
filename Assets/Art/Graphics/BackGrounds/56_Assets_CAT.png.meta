@@ -34,7 +34,6 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -623,31 +622,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      56_Assets_CAT_0: -341615100
-      56_Assets_CAT_1: -2066474714
-      56_Assets_CAT_10: 930413057
-      56_Assets_CAT_11: -1434817108
-      56_Assets_CAT_12: 760716701
-      56_Assets_CAT_13: 1775212602
-      56_Assets_CAT_14: -2039295445
-      56_Assets_CAT_15: -1382262710
-      56_Assets_CAT_16: -1329783813
-      56_Assets_CAT_17: -2077760882
-      56_Assets_CAT_18: -1899455502
-      56_Assets_CAT_19: 1162550006
-      56_Assets_CAT_2: -1418235472
-      56_Assets_CAT_20: 496074175
-      56_Assets_CAT_21: -893978719
-      56_Assets_CAT_22: -898366196
-      56_Assets_CAT_23: 536658
-      56_Assets_CAT_3: 984804532
-      56_Assets_CAT_4: 1051456938
-      56_Assets_CAT_5: -222374961
-      56_Assets_CAT_6: 1250323674
-      56_Assets_CAT_7: -599359353
-      56_Assets_CAT_8: -1924171839
-      56_Assets_CAT_9: 1267216777
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
