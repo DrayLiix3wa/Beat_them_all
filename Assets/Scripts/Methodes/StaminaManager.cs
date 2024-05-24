@@ -83,6 +83,34 @@ public class StaminaManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Fonction pour régénérer de l'endurance (ex: repos, potion, etc.)
+    /// </summary>
+    /// <param name="stamina"> Quantité d'endurance à régénérer </param>
+    public bool Regen( int stamina)
+    {
+        if ( current < max )
+        {
+            if ( current + stamina > max )
+            {
+                current = max;
+                LogDebug( "Stamina au maximum" );
+                return true;
+            }
+            else
+            {
+                current += stamina;
+                LogDebug( "Régénération de " + stamina + " points de stamina" );
+                return true;
+            }
+        }
+        else
+        {
+            LogDebug("Stamina au maximum");
+            return false;
+        }
+    }
+
+    /// <summary>
     /// Fonction de test pour consommer de l'endurance via l'inspecteur Unity
     /// </summary>
     [ContextMenu( "Consume Stamina Test (20)" )]
@@ -90,6 +118,16 @@ public class StaminaManager : MonoBehaviour
     {
         return Consume( 20 );
     }
+
+    /// <summary>
+    /// Fonction de test pour consommer de l'endurance via l'inspecteur Unity
+    /// </summary>
+    [ContextMenu("Consume Stamina Test (20)")]
+    public bool TestRegen()
+    {
+        return Regen(20);
+    }
+
     #endregion
 
     #region Private Methods
