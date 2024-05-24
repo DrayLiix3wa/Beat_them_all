@@ -52,7 +52,7 @@ public class Move : MonoBehaviour
         }
 
         LogDebug( "Déplacement du joueur vers la direction " + direction );
-        rb.velocity = new Vector3( direction.x * speed, rb.velocity.y, direction.y * speed );
+        rb.velocity = new Vector2( direction.x * speed, direction.y * speed );
     }
 
     #endregion
