@@ -8,20 +8,20 @@ using UnityEngine;
 public class Block : MonoBehaviour
 {
     public bool isBlocking;
+
+    public float currentSpeed;
+    public float walkSpeed;
     public float blockSpeed;
 
     public void OnBlockEnter()
     {
-
-    }
-
-    public void OnBlockPerform()
-    {
-
+        isBlocking = true;
+        currentSpeed = blockSpeed;
     }
 
     public void OnBlockExit()
     {
-
+        isBlocking = false;
+        currentSpeed = walkSpeed;
     }
 }
