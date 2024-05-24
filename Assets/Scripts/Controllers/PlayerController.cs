@@ -20,13 +20,14 @@ public class PlayerController : MonoBehaviour
     //References
     public Animator playerGraphics;
     public Move moveAction;
+    public Dash dashAction;
  
     
     //Controller switches
     private bool _isAttacking;
     private bool _isBigAttacking;
     private bool _isMoving;
-    private bool _isDashing;
+    public bool _isDashing;
     private bool _isHurting;
     private bool _isBlocking;
     private bool _isDead;
@@ -37,7 +38,7 @@ public class PlayerController : MonoBehaviour
     //Animation switches
     public bool _attackAnimation;
     public bool _deathAnimation;
-    public bool _dashAnimation;
+    //public bool _dashAnimation;
     public bool _hurtAnimation;
     public bool _bigAttackAnimation;
 
@@ -96,8 +97,9 @@ public class PlayerController : MonoBehaviour
                 playerGraphics.SetBool("isDead", true);
                 break;
             case PlayerState.DASH:
-                _dashAnimation = true;
+                //_dashAnimation = true;
                 playerGraphics.SetBool("isDashing", true);
+                dashAction.OnDashEnter();
                 break;
             case PlayerState.BLOCK:
                 _blockActive = true;
@@ -262,15 +264,15 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
             case PlayerState.DASH:
-                if (!_dashAnimation)
+
+                dashAction.OnDashPerform();
+
+
+                if (!_isDashing)
                 {
                     if (_isHurting)
                     {
                         TransitionToState(PlayerState.HURT);
-                    }
-                    else if (_isDashing)
-                    {
-                        TransitionToState(PlayerState.DASH);
                     }
                     else if (_isAttacking)
                     {
@@ -342,7 +344,7 @@ public class PlayerController : MonoBehaviour
             case PlayerState.DEATH:
                 break;
             case PlayerState.DASH:
-                _isDashing = false;
+                dashAction.OnDashExit();
                 playerGraphics.SetBool("isDashing", false);
                 break;
             case PlayerState.BLOCK:
@@ -425,7 +427,7 @@ public class PlayerController : MonoBehaviour
                 _isDashing = true;
                 break;
             case InputActionPhase.Canceled:
-                _isDashing = false;
+                //_isDashing = false;
                 break;
             default:
                 break;
