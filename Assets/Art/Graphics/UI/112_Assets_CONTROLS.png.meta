@@ -34,6 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -137,7 +138,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: d77cec7862c4a3c478f9129a66db83b7
-      internalID: -1137192190
+      internalID: 6163549446191138213
       vertices: []
       indices: 
       edges: []
@@ -158,7 +159,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 8c5b4a04a9723ac4a9d8c00ef526a66c
-      internalID: 1345095183
+      internalID: -3242217081163755767
       vertices: []
       indices: 
       edges: []
@@ -173,6 +174,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      112_Assets_CONTROLS_0: 6163549446191138213
+      112_Assets_CONTROLS_1: -3242217081163755767
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
