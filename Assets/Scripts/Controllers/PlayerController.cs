@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     //States
     public enum PlayerState
     {
-        IDLE, WALK, ATTACK, HURT, DEATH, DASH, BLOCK, BLOCK_WALK
+        IDLE, WALK, ATTACK, BIG_ATTACK, HURT, DEATH, DASH, BLOCK
     }
 
     public PlayerState currentState;
@@ -19,10 +19,12 @@ public class PlayerController : MonoBehaviour
 
     //References
     public Animator playerGraphics;
+    public Move moveAction;
  
     
     //Controller switches
     private bool _isAttacking;
+    private bool _isBigAttacking;
     private bool _isMoving;
     private bool _isDashing;
     private bool _isHurting;
@@ -37,6 +39,7 @@ public class PlayerController : MonoBehaviour
     public bool _deathAnimation;
     public bool _dashAnimation;
     public bool _hurtAnimation;
+    public bool _bigAttackAnimation;
 
     public bool _blockActive;
 
@@ -54,9 +57,22 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-       
-    }
+       if  (!_isDashing && !_isDead && !_isHurting)
+        {
+            if (_isMoving)
+            {
+                playerGraphics.SetBool("isWalking", true);
+            }
+            else
+            {
+                playerGraphics.SetBool("isWalking", false);
+            }
+            
+            moveAction.MoveProcess(_inputDirection);
+        }
 
+
+    }
     #region States
     void OnStateEnter()
     {
@@ -65,7 +81,7 @@ public class PlayerController : MonoBehaviour
             case PlayerState.IDLE:
                 break;
             case PlayerState.WALK:
-                playerGraphics.SetBool("isMoving", true);
+                //playerGraphics.SetBool("isWalking", true);
                 break;
             case PlayerState.ATTACK:
                 _attackAnimation = true;
@@ -86,6 +102,10 @@ public class PlayerController : MonoBehaviour
             case PlayerState.BLOCK:
                 _blockActive = true;
                 playerGraphics.SetBool("isBlocknig", true);
+                break;
+            case PlayerState.BIG_ATTACK:
+                _bigAttackAnimation = true;
+                playerGraphics.SetBool("isBigAttacking", true);
                 break;
             default:
                 break;
@@ -110,6 +130,10 @@ public class PlayerController : MonoBehaviour
                 {
                     TransitionToState(PlayerState.ATTACK);
                 }
+                else if (_isBigAttacking)
+                {
+                    TransitionToState(PlayerState.BIG_ATTACK);
+                }
                 else if (_isBlocking)
                 {
                     TransitionToState(PlayerState.BLOCK);
@@ -131,6 +155,10 @@ public class PlayerController : MonoBehaviour
                 else if (_isAttacking)
                 {
                     TransitionToState(PlayerState.ATTACK);
+                }
+                else if (_isBigAttacking)
+                {
+                    TransitionToState(PlayerState.BIG_ATTACK);
                 }
                 else if (_isBlocking)
                 {
@@ -167,6 +195,32 @@ public class PlayerController : MonoBehaviour
                     }
                 }
                 break;
+            case PlayerState.BIG_ATTACK:
+                if (_isHurting)
+                {
+                    TransitionToState(PlayerState.HURT);
+                }
+
+                if (!_bigAttackAnimation)
+                {
+                    if (_isDashing)
+                    {
+                        TransitionToState(PlayerState.DASH);
+                    }
+                    else if (_isBlocking)
+                    {
+                        TransitionToState(PlayerState.BLOCK);
+                    }
+                    else if (_isMoving)
+                    {
+                        TransitionToState(PlayerState.WALK);
+                    }
+                    else
+                    {
+                        TransitionToState(PlayerState.IDLE);
+                    }
+                }
+                break;
             case PlayerState.HURT:
 
                 if (!_hurtAnimation)
@@ -182,6 +236,10 @@ public class PlayerController : MonoBehaviour
                     else if (_isAttacking)
                     {
                         TransitionToState(PlayerState.ATTACK);
+                    }
+                    else if (_isBigAttacking)
+                    {
+                        TransitionToState(PlayerState.BIG_ATTACK);
                     }
                     else if (_isBlocking)
                     {
@@ -218,6 +276,10 @@ public class PlayerController : MonoBehaviour
                     {
                         TransitionToState(PlayerState.ATTACK);
                     }
+                    else if (_isBigAttacking)
+                    {
+                        TransitionToState(PlayerState.BIG_ATTACK);
+                    }
                     else if (_isBlocking)
                     {
                         TransitionToState(PlayerState.BLOCK);
@@ -245,7 +307,7 @@ public class PlayerController : MonoBehaviour
                 {
                     TransitionToState(PlayerState.ATTACK);
                 }
-                else if (_isMoving)
+                else if (!_isBlocking && _isMoving)
                 {
                     TransitionToState(PlayerState.WALK);
                 }
@@ -254,6 +316,7 @@ public class PlayerController : MonoBehaviour
                     TransitionToState(PlayerState.IDLE);
                 }
                 break;
+
             default:
                 break;
         }
@@ -285,6 +348,10 @@ public class PlayerController : MonoBehaviour
             case PlayerState.BLOCK:
                 _blockActive = false;
                 playerGraphics.SetBool("isBlocking", false);
+                break;
+            case PlayerState.BIG_ATTACK:
+                _isBigAttacking = false;
+                playerGraphics.SetBool("isBigAttacking", false);
                 break;
             default:
                 break;
@@ -333,21 +400,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    /*public void StrongAttackInput(InputAction.CallbackContext context)
+    public void StrongAttackInput(InputAction.CallbackContext context)
     {
         switch (context.phase)
         {
             case InputActionPhase.Performed:
                 //Stamina Check
-                _isAttacking = true;
+                _isBigAttacking = true;
                 break;
             case InputActionPhase.Canceled:
-                _isAttacking = false;
+                _isBigAttacking = false;
                 break;
             default:
                 break;
         }
-    }*/
+    }
 
     public void DashInput(InputAction.CallbackContext context)
     {
