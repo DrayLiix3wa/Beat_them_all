@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!61 &415671873 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 205686223603719387, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
+  m_PrefabInstance: {fileID: 2920804210533681082}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &452617246 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8490258665820737081, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
@@ -463,6 +468,18 @@ PrefabInstance:
     - target: {fileID: 5854977064891252123, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106752229445146655, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
+      propertyPath: hitBox
+      value: 
+      objectReference: {fileID: 415671873}
+    - target: {fileID: 6106752229445146655, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
+      propertyPath: dashSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106752229445146655, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
+      propertyPath: dashDuration
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6106752229445146655, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
       propertyPath: trailRenderer

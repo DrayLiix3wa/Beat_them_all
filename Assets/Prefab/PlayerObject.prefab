@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6013938427593080361}
   - component: {fileID: 205686223603719387}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5894580769721314704}
   - component: {fileID: 5978474011267842966}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: StrongHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5313028977054409490}
   - component: {fileID: 3002052922159334352}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WeakHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 6066982115297043721}
   - component: {fileID: 157676627069001335}
   - component: {fileID: 610123544095840109}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerGraphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 6464833806168118731}
   - component: {fileID: 6747064752370881565}
   - component: {fileID: 6106752229445146655}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -641,6 +641,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 1666212626196770515}
   trailRenderer: {fileID: 610123544095840109}
-  dashDuration: 0.3
-  dashSpeed: 15
+  dashDuration: 0.1
+  dashSpeed: 5
   playerManager: {fileID: 4025436369105142048}
+  hitBox: {fileID: 205686223603719387}
+  playerLayer: 6
+  dashLayer: 7
