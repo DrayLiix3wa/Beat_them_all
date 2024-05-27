@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class EnemyController : MonoBehaviour
 {
@@ -14,11 +15,18 @@ public class EnemyController : MonoBehaviour
 
 
     //References
+    [Header("References")]
     public Animator enemyGraphics;
     public Move moveAction;
     public HealthManager healthManager;
+    private Transform player;
+ 
 
-    public SO_player StatsEnemy;
+    [Header("PlayerChecker")]
+    public Transform playerDetector;
+    public Vector2 playerDetectorSize = new Vector2(0.6f, 0.1f);
+    private Collider2D _playerCollider;
+    public LayerMask _playerLayerMask;
 
 
     //Controller switches
@@ -34,10 +42,14 @@ public class EnemyController : MonoBehaviour
 
     public int damageTaken;
 
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
     void Update()
     {
         OnStateUpdate();
-        StatsEnemy.health = healthManager.current;
     }
 
     void FixedUpdate()
@@ -47,11 +59,27 @@ public class EnemyController : MonoBehaviour
             if (_isMoving)
             {
                 enemyGraphics.SetBool("isWalking", true);
+                Vector2 direction = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);
+                //Debug.Log(direction);
+                moveAction.MoveProcess(direction.normalized);
             }
             else
             {
                 enemyGraphics.SetBool("isWalking", false);
             }
+
+        }
+
+        _playerCollider = Physics2D.OverlapBox(playerDetector.position, playerDetectorSize, 0f, _playerLayerMask);
+        if (_playerCollider)
+        {
+            _isAttacking = true;
+            _isMoving = false;
+        }
+        else
+        {
+            _isAttacking = false;
+            _isMoving = true;
         }
 
 
@@ -67,6 +95,7 @@ public class EnemyController : MonoBehaviour
                 break;
             case EnemyState.ATTACK:
                 _attackAnimation = true;
+                moveAction.MoveProcess(Vector2.zero);
                 enemyGraphics.SetBool("isAttacking", true);
                 break;
             case EnemyState.HURT:
@@ -188,6 +217,7 @@ public class EnemyController : MonoBehaviour
             case EnemyState.HURT:
                 _isHurting = false;
                 enemyGraphics.SetBool("isHurting", false);
+                moveAction.MoveProcess(Vector2.zero);
                 break;
             case EnemyState.DEATH:
                 break;
@@ -201,4 +231,9 @@ public class EnemyController : MonoBehaviour
         OnStateEnter();
     }
     #endregion
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawCube(playerDetector.position, playerDetectorSize);
+    }
 }

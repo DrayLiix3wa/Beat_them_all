@@ -24,6 +24,8 @@ public class PlayerHitBoxManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Got Hit !");
+        
         if (damageTags.Contains(collision.tag))
         {
             if (playerController._blockActive)

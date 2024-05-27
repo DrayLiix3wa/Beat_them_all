@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8578132648144019577}
   - component: {fileID: 9197594402691106699}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: CollectBox
   m_TagString: PlayerCollect
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 6013938427593080361}
   - component: {fileID: 205686223603719387}
   - component: {fileID: 399751819431924364}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,13 +171,13 @@ GameObject:
   - component: {fileID: 5894580769721314704}
   - component: {fileID: 5978474011267842966}
   - component: {fileID: 2579271559965323843}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: StrongHit
   m_TagString: PlayerHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5894580769721314704
 Transform:
   m_ObjectHideFlags: 0
@@ -200,7 +200,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3623685385491560448}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -262,13 +262,13 @@ GameObject:
   - component: {fileID: 5313028977054409490}
   - component: {fileID: 3002052922159334352}
   - component: {fileID: 5451209083168659269}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: WeakHit
   m_TagString: PlayerHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5313028977054409490
 Transform:
   m_ObjectHideFlags: 0
@@ -291,7 +291,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6314203543921802427}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 6066982115297043721}
   - component: {fileID: 157676627069001335}
   - component: {fileID: 4543980344061864618}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PlayerGraphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,8 +463,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9d45275c2a8f8439023d65a801531e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weakStrikeHitBox: {fileID: 6314203543921802427}
-  strongStrikeHitBox: {fileID: 3623685385491560448}
+  weakStrikeHitBox: {fileID: 3002052922159334352}
+  strongStrikeHitBox: {fileID: 5978474011267842966}
 --- !u!114 &157676627069001335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -694,7 +694,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &7381933678162592318
 MonoBehaviour:
   m_ObjectHideFlags: 0

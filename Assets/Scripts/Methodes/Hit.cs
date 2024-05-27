@@ -7,25 +7,25 @@ using UnityEngine;
 
 public class Hit : MonoBehaviour
 {
-    public GameObject weakStrikeHitBox;
-    public GameObject strongStrikeHitBox;
+    public BoxCollider2D weakStrikeHitBox;
+    public BoxCollider2D strongStrikeHitBox;
 
     public void WeakStrikeActivation()
     {
-        weakStrikeHitBox.SetActive(true);
+        weakStrikeHitBox.enabled = true;
     }
 
     public void StrongStrikeActivation()
     {
-        strongStrikeHitBox.SetActive(true);
+        strongStrikeHitBox.enabled = true;
     }
 
     public void WeakStrikeDeactivate()
     {
-        weakStrikeHitBox.SetActive(false);
+        weakStrikeHitBox.enabled = false;
     }
     public void StrongStrikeDeactivate()
     {
-        strongStrikeHitBox.SetActive(false);
+        strongStrikeHitBox.enabled = false;
     }
 }
