@@ -37,7 +37,7 @@ public class Collectable : MonoBehaviour
             else if(type == ItemType.STAMINA)
             {
                 StaminaManager manager = collision.GetComponent<StaminaManager>();
-                //manager.Regen(itemValue);
+                manager.Regen(itemValue);
                 Collect();
             }
             else
