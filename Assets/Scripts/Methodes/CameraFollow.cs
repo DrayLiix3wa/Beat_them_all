@@ -7,12 +7,12 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target;
+    public Transform anchor;
     public Vector3 posOffset;
 
     void LateUpdate()
     {
-        transform.position = target.position + posOffset;
+        transform.position = anchor.position + posOffset;
     }
 
     /*[Header("Player")]
