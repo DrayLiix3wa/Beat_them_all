@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using static UnityEngine.GraphicsBuffer;
 
 [AddComponentMenu("Dirk Dynamite/EnemyController")]
@@ -44,6 +45,8 @@ public class EnemyController : MonoBehaviour
     public bool _hurtAnimation;
 
     public int damageTaken;
+
+    public UnityEvent onDeath;
 
     void Start()
     {
@@ -196,7 +199,8 @@ public class EnemyController : MonoBehaviour
             case EnemyState.DEATH:
                 if (!_deathAnimation)
                 {
-
+                    onDeath.Invoke();
+                    Destroy(gameObject);
                 }
                 break;
             default:

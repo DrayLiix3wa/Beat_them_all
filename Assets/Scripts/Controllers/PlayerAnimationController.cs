@@ -36,6 +36,6 @@ public class PlayerAnimationController : MonoBehaviour
 
     public void EndDeath()
     {
-        playerController._hurtAnimation = false;
+        playerController._deathAnimation = false;
     }
 }
