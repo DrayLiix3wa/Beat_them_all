@@ -17,10 +17,10 @@ public class StaminaManager : MonoBehaviour
     public int current;
     [Tooltip("Temps de recharge de l'endurance (en secondes)")]
     [Range(0f, 10f)]
-    public float cooldown = 5f;
+    public float cooldown = 2f;
     [Tooltip("Taux de régénération de l'endurance (par seconde)")]
     [Range(0f, 20f)]
-    public float regenRate = 10f;
+    public float regenRate = 0.1f;
 
     [Space(10)]
 
@@ -31,7 +31,10 @@ public class StaminaManager : MonoBehaviour
 
     #region Private Variables
     [SerializeField]
-    private float _chrono = 0f;
+    private float _chrono = 0f; 
+    private bool _coolDownStart = false;
+    private Coroutine regenCoroutine = null;
+
     #endregion
 
     #region Unity Lifecycle
@@ -49,11 +52,15 @@ public class StaminaManager : MonoBehaviour
     {
         if ( current < max )
         {
-            _chrono += Time.deltaTime;
+            if ( _coolDownStart )
+            {
+              _chrono += Time.deltaTime;
+            }
             if ( _chrono >= cooldown )
             {
+                _coolDownStart = false;
                 LogDebug( "Temps de recharge écoulé - lancement de la régénération de la stamina" );
-                StartCoroutine( Regen() );
+                StartRegen();
                 _chrono = 0f;
             }
         }
@@ -71,8 +78,9 @@ public class StaminaManager : MonoBehaviour
         if ( current >= cost )
         {
             current -= cost;
-            _chrono = 0f;
+            _coolDownStart = true;
             LogDebug( "Stamina consommée " + cost + ". Stamina actuelle : " + current );
+            StopRegen();
             return true;
         }
         else
@@ -135,17 +143,40 @@ public class StaminaManager : MonoBehaviour
     /// Fonction de régénération de l'endurance via une coroutine
     /// </summary>
     /// <returns></returns>
-    private IEnumerator Regen()
+    private IEnumerator RegenCoroutine()
     {
-        while ( current < max )
+        while (current < max)
         {
             current += 1;
-            if ( current > max )
+            if (current > max)
             {
                 current = max;
             }
-            LogDebug( "Régénération de la stamina. Stamina actuelle: " + current );
-            yield return new WaitForSeconds( regenRate );
+            LogDebug("Régénération de la stamina. Stamina actuelle: " + current);
+            yield return new WaitForSeconds(regenRate);
+        }
+    }
+
+    /// <summary>
+    /// Démarrer la régénération
+    /// </summary>
+    private void StartRegen()
+    {
+        if (regenCoroutine == null)
+        {
+            regenCoroutine = StartCoroutine(RegenCoroutine());
+        }
+    }
+
+    /// <summary>
+    /// Arrêter la régénération
+    /// </summary>
+    private void StopRegen()
+    {
+        if (regenCoroutine != null)
+        {
+            StopCoroutine(regenCoroutine);
+            regenCoroutine = null;
         }
     }
 
