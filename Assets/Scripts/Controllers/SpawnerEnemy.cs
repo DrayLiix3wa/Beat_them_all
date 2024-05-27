@@ -13,7 +13,6 @@ public class Wave
 public class SpawnerEnemy : MonoBehaviour
 {
     public Wave[] myWaves;
-    [SerializeField] Transform _grpEnemy;
     int waveCount = 0;
     bool isRunning = true;
 
@@ -27,7 +26,7 @@ public class SpawnerEnemy : MonoBehaviour
 
     void Update()
     {
-        if(_grpEnemy.childCount == 0)
+        if(gameObject.transform.childCount == 0)
         {
             waveCount++;
             isRunning = true;
@@ -41,7 +40,8 @@ public class SpawnerEnemy : MonoBehaviour
         {
             isRunning = true;
             Vector2 spawnPos = (Vector2)transform.position;
-            Instantiate(e, spawnPos, Quaternion.identity);
+            GameObject enemy = Instantiate(e, spawnPos, Quaternion.identity);
+            enemy.transform.parent = transform;
             yield return new WaitForSeconds(myWaves[waveID].spawnInterval);
             isRunning = false;
         }
