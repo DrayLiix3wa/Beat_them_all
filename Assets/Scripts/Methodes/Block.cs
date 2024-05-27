@@ -14,6 +14,7 @@ public class Block : MonoBehaviour
     //public float currentSpeed;
     public float walkSpeed = 5f;
     public float blockSpeed = 2f;
+    public int blockCost = 10;
 
     public void OnBlockEnter()
     {

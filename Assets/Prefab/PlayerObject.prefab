@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6013938427593080361}
   - component: {fileID: 205686223603719387}
+  - component: {fileID: 399751819431924364}
   m_Layer: 6
   m_Name: HitBox
   m_TagString: Untagged
@@ -77,6 +78,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.40592355, y: 0.8358762}
   m_EdgeRadius: 0
+--- !u!114 &399751819431924364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556799860638286079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134d49a30f735a54a8bd20d0d80961d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTags:
+  - EnnemyHit
+  playerController: {fileID: 4025436369105142048}
 --- !u!1 &3623685385491560448
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,9 +103,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5894580769721314704}
   - component: {fileID: 5978474011267842966}
+  - component: {fileID: 2579271559965323843}
   m_Layer: 6
   m_Name: StrongHit
-  m_TagString: Untagged
+  m_TagString: PlayerHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,6 +171,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.83992136, y: 1.2108457}
   m_EdgeRadius: 0
+--- !u!114 &2579271559965323843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3623685385491560448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642c9e91ae573bc45826c67a73fc0166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitDamageValue: 20
 --- !u!1 &6314203543921802427
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,9 +194,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5313028977054409490}
   - component: {fileID: 3002052922159334352}
+  - component: {fileID: 5451209083168659269}
   m_Layer: 6
   m_Name: WeakHit
-  m_TagString: Untagged
+  m_TagString: PlayerHit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,6 +262,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5282104, y: 1.2122408}
   m_EdgeRadius: 0
+--- !u!114 &5451209083168659269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6314203543921802427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642c9e91ae573bc45826c67a73fc0166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitDamageValue: 10
 --- !u!1 &8490258665820737081
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +534,7 @@ GameObject:
   - component: {fileID: 5652987970314357076}
   m_Layer: 6
   m_Name: PlayerObject
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -533,12 +577,19 @@ MonoBehaviour:
   blockAction: {fileID: 926512805373814162}
   healthManager: {fileID: 6464833806168118731}
   staminaManager: {fileID: 5652987970314357076}
+  StatsPlayer: {fileID: 11400000, guid: 346ff318c8fda5244857707e49d9b303, type: 2}
   _isDashing: 0
+  _isHurting: 0
   _attackAnimation: 0
   _deathAnimation: 0
   _hurtAnimation: 0
   _bigAttackAnimation: 0
+  weakHitStaminaCost: 10
+  strongHitStaminaCost: 20
+  dashCost: 10
+  blockCost: 10
   _blockActive: 0
+  damageTaken: 0
 --- !u!50 &1666212626196770515
 Rigidbody2D:
   serializedVersion: 4
@@ -649,7 +700,6 @@ MonoBehaviour:
   dashDuration: 0.1
   dashSpeed: 5
   playerManager: {fileID: 4025436369105142048}
-  staminaCost: 10
   hitBox: {fileID: 205686223603719387}
   playerLayer: 6
   dashLayer: 7
@@ -669,6 +719,7 @@ MonoBehaviour:
   moveManager: {fileID: 7381933678162592318}
   walkSpeed: 5
   blockSpeed: 2
+  blockCost: 10
 --- !u!114 &5652987970314357076
 MonoBehaviour:
   m_ObjectHideFlags: 0

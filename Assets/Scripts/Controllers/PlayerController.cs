@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     public Block blockAction;
     public HealthManager healthManager;
     public StaminaManager staminaManager;
+
+    public SO_player StatsPlayer; 
  
     
     //Controller switches
@@ -31,7 +33,7 @@ public class PlayerController : MonoBehaviour
     private bool _isBigAttacking;
     private bool _isMoving;
     public bool _isDashing;
-    private bool _isHurting;
+    public bool _isHurting;
     private bool _isBlocking;
     private bool _isDead;
     private bool _isInteracting;
@@ -53,6 +55,7 @@ public class PlayerController : MonoBehaviour
     public int blockCost = 10;
 
     public bool _blockActive;
+    public int damageTaken;
 
     //Start is called before the first frame update
     void Start()
@@ -64,6 +67,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         OnStateUpdate();
+        StatsPlayer.health = healthManager.current;
+        StatsPlayer.stamina = staminaManager.current;
     }
 
     void FixedUpdate()
@@ -101,7 +106,7 @@ public class PlayerController : MonoBehaviour
             case PlayerState.HURT:
                 _hurtAnimation = true;
                 playerGraphics.SetBool("isHurting", true);
-                healthManager.Hurt(1);
+                healthManager.Hurt(damageTaken);
                 break;
             case PlayerState.DEATH:
                 _deathAnimation = true;
