@@ -668,6 +668,9 @@ MonoBehaviour:
   blockCost: 10
   _blockActive: 0
   damageTaken: 0
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1666212626196770515
 Rigidbody2D:
   serializedVersion: 4
