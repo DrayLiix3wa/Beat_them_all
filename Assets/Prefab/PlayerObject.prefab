@@ -64,7 +64,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5887377, y: -0.42434996}
+  m_Offset: {x: 0.028630465, y: -0.12273502}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.43420005, y: 0.85472715}
+  m_Size: {x: 0.40592355, y: 0.8358762}
   m_EdgeRadius: 0
 --- !u!1 &3623685385491560448
 GameObject:
@@ -141,7 +141,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.29697943, y: -0.42011753}
+  m_Offset: {x: 0.8248057, y: -0.06666243}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -152,7 +152,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5939589, y: 1.1448674}
+  m_Size: {x: 0.83992136, y: 1.2108457}
   m_EdgeRadius: 0
 --- !u!1 &6314203543921802427
 GameObject:
@@ -218,7 +218,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.10865104, y: -0.42011726}
+  m_Offset: {x: 0.6878011, y: -0.094938576}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -229,7 +229,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7826979, y: 1.2028153}
+  m_Size: {x: 0.5282104, y: 1.2122408}
   m_EdgeRadius: 0
 --- !u!1 &8490258665820737081
 GameObject:
@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 251702539455223720}
   - component: {fileID: 6066982115297043721}
   - component: {fileID: 157676627069001335}
-  - component: {fileID: 610123544095840109}
+  - component: {fileID: 4543980344061864618}
   m_Layer: 6
   m_Name: PlayerGraphics
   m_TagString: Untagged
@@ -261,7 +261,7 @@ Transform:
   m_GameObject: {fileID: 8490258665820737081}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.614, y: -0.312, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 4025436369105142048}
---- !u!96 &610123544095840109
+--- !u!96 &4543980344061864618
 TrailRenderer:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -624,8 +624,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5851991, y: -0.43803394}
-  m_Size: {x: 0.5238857, y: 1.2391164}
+  m_Offset: {x: 0.03688182, y: -0.117568016}
+  m_Size: {x: 0.42963096, y: 1.1448617}
   m_Direction: 0
 --- !u!114 &6106752229445146655
 MonoBehaviour:
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 1666212626196770515}
-  trailRenderer: {fileID: 610123544095840109}
+  trailRenderer: {fileID: 4543980344061864618}
   dashDuration: 0.1
   dashSpeed: 5
   playerManager: {fileID: 4025436369105142048}

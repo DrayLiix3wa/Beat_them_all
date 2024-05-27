@@ -53,6 +53,15 @@ public class Move : MonoBehaviour
 
         LogDebug( "Déplacement du joueur vers la direction " + direction );
         rb.velocity = new Vector2( direction.x * speed, direction.y * speed );
+
+        if (direction.x < 0 && transform.localScale.x > 0 )
+        {
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+        }
+        else if (direction.x > 0 && transform.localScale.x < 0)
+        {
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+        }
     }
 
     #endregion
