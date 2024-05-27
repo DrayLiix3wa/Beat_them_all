@@ -607,6 +607,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6106752229445146655, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
+      propertyPath: dashDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106752229445146655, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
       propertyPath: dashLayer.m_Bits
       value: 128
       objectReference: {fileID: 0}
@@ -753,9 +757,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4656196381090252881, guid: acf076d7d3417f84dbce4ff0afce40c1, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5352037557489036431, guid: acf076d7d3417f84dbce4ff0afce40c1, type: 3}
       propertyPath: m_Name
       value: EnnemyObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352037557489036431, guid: acf076d7d3417f84dbce4ff0afce40c1, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7973691397101824776, guid: acf076d7d3417f84dbce4ff0afce40c1, type: 3}
       propertyPath: m_LocalPosition.x
