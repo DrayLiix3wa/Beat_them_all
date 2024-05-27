@@ -102,6 +102,7 @@ public class PlayerController : MonoBehaviour
                 break;
             case PlayerState.ATTACK:
                 _attackAnimation = true;
+                staminaManager.Consume(weakHitStaminaCost);
                 playerGraphics.SetBool("isAttacking", true);
                 break;
             case PlayerState.HURT:
@@ -115,6 +116,7 @@ public class PlayerController : MonoBehaviour
                 break;
             case PlayerState.DASH:
                 //_dashAnimation = true;
+                staminaManager.Consume(dashCost);
                 playerGraphics.SetBool("isDashing", true);
                 dashAction.OnDashEnter();
                 break;
@@ -124,6 +126,7 @@ public class PlayerController : MonoBehaviour
                 break;
             case PlayerState.BIG_ATTACK:
                 _bigAttackAnimation = true;
+                staminaManager.Consume(strongHitStaminaCost);
                 playerGraphics.SetBool("isBigAttacking", true);
                 break;
             default:
@@ -418,7 +421,7 @@ public class PlayerController : MonoBehaviour
                 if (staminaManager.current >= weakHitStaminaCost)
                 {
                     _isAttacking = true;
-                    staminaManager.Consume(weakHitStaminaCost);
+                    
                 }
                 else
                 {
@@ -443,7 +446,7 @@ public class PlayerController : MonoBehaviour
                 if (staminaManager.current >= strongHitStaminaCost)
                 {
                     _isBigAttacking = true;
-                    staminaManager.Consume(strongHitStaminaCost);
+                    
                 }
                 else
                 {
@@ -467,7 +470,7 @@ public class PlayerController : MonoBehaviour
                 if (staminaManager.current >= dashCost)
                 {
                     _isDashing = true;
-                    staminaManager.Consume(dashCost);
+                    
                 }
                 else
                 {

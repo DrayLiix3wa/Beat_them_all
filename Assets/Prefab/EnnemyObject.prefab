@@ -144,7 +144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 367577226183745251}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PlayerDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 5584234368955149919}
   - component: {fileID: 6644189892971862653}
   - component: {fileID: 7125728747779743007}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: EnnemyObject
   m_TagString: Enemy
   m_Icon: {fileID: 0}
