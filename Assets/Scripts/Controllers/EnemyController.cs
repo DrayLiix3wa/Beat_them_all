@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[AddComponentMenu("Dirk Dynamite/EnemyController")]
+[DisallowMultipleComponent]
+
 public class EnemyController : MonoBehaviour
 {
     //States
@@ -17,9 +20,6 @@ public class EnemyController : MonoBehaviour
     public Animator enemyGraphics;
     public Move moveAction;
     public HealthManager healthManager;
-
-    public SO_player StatsEnemy;
-
 
     //Controller switches
     private bool _isAttacking;
@@ -37,7 +37,6 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         OnStateUpdate();
-        StatsEnemy.health = healthManager.current;
     }
 
     void FixedUpdate()
