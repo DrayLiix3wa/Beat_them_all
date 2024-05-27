@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
+[AddComponentMenu("Dirk Dynamite/EnemyController")]
+[DisallowMultipleComponent]
+
 public class EnemyController : MonoBehaviour
 {
     //States
