@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     public Block blockAction;
     public HealthManager healthManager;
     public StaminaManager staminaManager;
+    public CircleCollider2D collectCollider;
 
     public SO_player StatsPlayer; 
  
@@ -502,9 +503,11 @@ public class PlayerController : MonoBehaviour
         {
             case InputActionPhase.Performed:
                 _isInteracting = true;
+                collectCollider.enabled = true;
                 break;
             case InputActionPhase.Canceled:
                 _isInteracting = false;
+                collectCollider.enabled = false;
                 break;
             default:
                 break;

@@ -30,13 +30,13 @@ public class Collectable : MonoBehaviour
         {
             if(type == ItemType.HEAL)
             {
-                HealthManager manager = collision.GetComponent<HealthManager>();
+                HealthManager manager = collision.transform.parent.GetComponent<HealthManager>();
                 manager.Regen(itemValue);
                 Collect();
             }
             else if(type == ItemType.STAMINA)
             {
-                StaminaManager manager = collision.GetComponent<StaminaManager>();
+                StaminaManager manager = collision.transform.parent.GetComponent<StaminaManager>();
                 manager.Regen(itemValue);
                 Collect();
             }

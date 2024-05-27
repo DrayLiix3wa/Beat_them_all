@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collectable
   - PlayerHit
+  - PlayerCollect
   layers:
   - Default
   - TransparentFX

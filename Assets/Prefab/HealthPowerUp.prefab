@@ -131,13 +131,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 342bbd9602c49f84baf3387513df9de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCollectTag: Collectable
+  playerCollectTag: PlayerCollect
   playerTag: Player
   infoBox: {fileID: 7062986443238362773}
   OnPickUp:
     m_PersistentCalls:
       m_Calls: []
-  itemValue: 0
+  itemValue: 10
   destroyDelay: 0.5
   type: 0
 --- !u!58 &6055464481741868398
