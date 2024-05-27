@@ -18,7 +18,7 @@ public class Dash : MonoBehaviour
     public float dashDuration = 0.3f;
     public float dashSpeed = 2f;
     public PlayerController playerManager;
-
+    
     private float dashChrono = 0f;
     private Vector2 direction;
 

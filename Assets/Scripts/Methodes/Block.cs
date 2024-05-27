@@ -7,21 +7,23 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    public bool isBlocking;
+    //public bool isBlocking;
 
-    public float currentSpeed;
-    public float walkSpeed;
-    public float blockSpeed;
+    public PlayerController playerManager;
+    public Move moveManager;
+    //public float currentSpeed;
+    public float walkSpeed = 5f;
+    public float blockSpeed = 2f;
 
     public void OnBlockEnter()
     {
-        isBlocking = true;
-        currentSpeed = blockSpeed;
+        playerManager._blockActive = true;
+        moveManager.speed = blockSpeed;
     }
 
     public void OnBlockExit()
     {
-        isBlocking = false;
-        currentSpeed = walkSpeed;
+        playerManager._blockActive = false;
+        moveManager.speed = walkSpeed;
     }
 }

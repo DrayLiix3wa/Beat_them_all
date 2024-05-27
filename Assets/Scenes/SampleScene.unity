@@ -355,6 +355,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6106752229445146655, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
+      propertyPath: dashLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106752229445146655, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 9190162148198242814, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
       propertyPath: m_Name
       value: PlayerObject

@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     public Animator playerGraphics;
     public Move moveAction;
     public Dash dashAction;
+    public Block blockAction;
+    public HealthManager healthManager;
+    public StaminaManager staminaManager;
  
     
     //Controller switches
@@ -41,6 +44,13 @@ public class PlayerController : MonoBehaviour
     //public bool _dashAnimation;
     public bool _hurtAnimation;
     public bool _bigAttackAnimation;
+
+    //StaminaCosts
+    [Header("Stamina costs")]
+    public int weakHitStaminaCost = 10;
+    public int strongHitStaminaCost = 20;
+    public int dashCost = 10;
+    public int blockCost = 10;
 
     public bool _blockActive;
 
@@ -91,6 +101,7 @@ public class PlayerController : MonoBehaviour
             case PlayerState.HURT:
                 _hurtAnimation = true;
                 playerGraphics.SetBool("isHurting", true);
+                healthManager.Hurt(1);
                 break;
             case PlayerState.DEATH:
                 _deathAnimation = true;
@@ -102,8 +113,8 @@ public class PlayerController : MonoBehaviour
                 dashAction.OnDashEnter();
                 break;
             case PlayerState.BLOCK:
-                _blockActive = true;
-                playerGraphics.SetBool("isBlocknig", true);
+                blockAction.OnBlockEnter();
+                playerGraphics.SetBool("isBlocking", true);
                 break;
             case PlayerState.BIG_ATTACK:
                 _bigAttackAnimation = true;
@@ -224,6 +235,11 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
             case PlayerState.HURT:
+
+                if (healthManager.current == 0)
+                {
+                    _isDead = true;
+                }
 
                 if (!_hurtAnimation)
                 {
@@ -348,7 +364,7 @@ public class PlayerController : MonoBehaviour
                 playerGraphics.SetBool("isDashing", false);
                 break;
             case PlayerState.BLOCK:
-                _blockActive = false;
+                blockAction.OnBlockExit();
                 playerGraphics.SetBool("isBlocking", false);
                 break;
             case PlayerState.BIG_ATTACK:
@@ -392,7 +408,16 @@ public class PlayerController : MonoBehaviour
         {
             case InputActionPhase.Performed:
                 //Stamina Check
-                _isAttacking = true;
+                
+                if (staminaManager.current >= weakHitStaminaCost)
+                {
+                    _isAttacking = true;
+                    staminaManager.Consume(weakHitStaminaCost);
+                }
+                else
+                {
+
+                }
                 break;
             case InputActionPhase.Canceled:
                 _isAttacking = false;
@@ -408,7 +433,16 @@ public class PlayerController : MonoBehaviour
         {
             case InputActionPhase.Performed:
                 //Stamina Check
-                _isBigAttacking = true;
+                
+                if (staminaManager.current >= strongHitStaminaCost)
+                {
+                    _isBigAttacking = true;
+                    staminaManager.Consume(strongHitStaminaCost);
+                }
+                else
+                {
+
+                }
                 break;
             case InputActionPhase.Canceled:
                 _isBigAttacking = false;
@@ -424,7 +458,15 @@ public class PlayerController : MonoBehaviour
         {
             case InputActionPhase.Performed:
                 //Stamina Check
-                _isDashing = true;
+                if (staminaManager.current >= dashCost)
+                {
+                    _isDashing = true;
+                    staminaManager.Consume(dashCost);
+                }
+                else
+                {
+
+                }
                 break;
             case InputActionPhase.Canceled:
                 //_isDashing = false;

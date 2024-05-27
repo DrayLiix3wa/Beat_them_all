@@ -486,6 +486,8 @@ GameObject:
   - component: {fileID: 6464833806168118731}
   - component: {fileID: 6747064752370881565}
   - component: {fileID: 6106752229445146655}
+  - component: {fileID: 926512805373814162}
+  - component: {fileID: 5652987970314357076}
   m_Layer: 6
   m_Name: PlayerObject
   m_TagString: Untagged
@@ -528,6 +530,9 @@ MonoBehaviour:
   playerGraphics: {fileID: 251702539455223720}
   moveAction: {fileID: 7381933678162592318}
   dashAction: {fileID: 6106752229445146655}
+  blockAction: {fileID: 926512805373814162}
+  healthManager: {fileID: 6464833806168118731}
+  staminaManager: {fileID: 5652987970314357076}
   _isDashing: 0
   _attackAnimation: 0
   _deathAnimation: 0
@@ -644,6 +649,41 @@ MonoBehaviour:
   dashDuration: 0.1
   dashSpeed: 5
   playerManager: {fileID: 4025436369105142048}
+  staminaCost: 10
   hitBox: {fileID: 205686223603719387}
   playerLayer: 6
   dashLayer: 7
+--- !u!114 &926512805373814162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9190162148198242814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805046565a0da424ca467b3cfe018d5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerManager: {fileID: 4025436369105142048}
+  moveManager: {fileID: 7381933678162592318}
+  walkSpeed: 5
+  blockSpeed: 2
+--- !u!114 &5652987970314357076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9190162148198242814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16ed185571c0bb4fb78e4b1bc562504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  max: 100
+  current: 0
+  cooldown: 5
+  regenRate: 0.5
+  debugMode: 0
+  _chrono: 0
