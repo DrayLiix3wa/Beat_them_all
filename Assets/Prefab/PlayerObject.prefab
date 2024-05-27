@@ -812,7 +812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max: 100
   current: 0
-  cooldown: 5
-  regenRate: 0.5
+  cooldown: 2
+  regenRate: 0.1
   debugMode: 0
   _chrono: 0

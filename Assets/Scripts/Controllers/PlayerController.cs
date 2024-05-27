@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 
@@ -58,6 +59,9 @@ public class PlayerController : MonoBehaviour
     public bool _blockActive;
     public int damageTaken;
 
+    public UnityEvent onDeath;
+
+
     //Start is called before the first frame update
     void Start()
     {
@@ -104,6 +108,7 @@ public class PlayerController : MonoBehaviour
                 _attackAnimation = true;
                 staminaManager.Consume(weakHitStaminaCost);
                 playerGraphics.SetBool("isAttacking", true);
+               // moveAction.MoveProcess(Vector2.zero);
                 break;
             case PlayerState.HURT:
                 _hurtAnimation = true;
@@ -113,6 +118,7 @@ public class PlayerController : MonoBehaviour
             case PlayerState.DEATH:
                 _deathAnimation = true;
                 playerGraphics.SetBool("isDead", true);
+                moveAction.MoveProcess(Vector2.zero);
                 break;
             case PlayerState.DASH:
                 //_dashAnimation = true;
@@ -128,6 +134,7 @@ public class PlayerController : MonoBehaviour
                 _bigAttackAnimation = true;
                 staminaManager.Consume(strongHitStaminaCost);
                 playerGraphics.SetBool("isBigAttacking", true);
+               // moveAction.MoveProcess(Vector2.zero);
                 break;
             default:
                 break;
@@ -285,7 +292,7 @@ public class PlayerController : MonoBehaviour
             case PlayerState.DEATH:
                 if (!_deathAnimation)
                 {
-                    
+                    onDeath.Invoke();
                 }
                 break;
             case PlayerState.DASH:

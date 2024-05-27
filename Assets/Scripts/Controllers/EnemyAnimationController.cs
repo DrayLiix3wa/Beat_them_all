@@ -32,6 +32,6 @@ public class EnemyAnimationController : MonoBehaviour
 
     public void EndDeath()
     {
-        enemyController._hurtAnimation = false;
+        enemyController._deathAnimation = false;
     }
 }
