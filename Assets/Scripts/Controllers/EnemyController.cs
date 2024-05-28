@@ -24,7 +24,8 @@ public class EnemyController : MonoBehaviour
     public Move moveAction;
     public HealthManager healthManager;
     private Transform player;
- 
+    public Hit hitAction;
+
 
     [Header("PlayerChecker")]
     public Transform playerDetector;
@@ -38,6 +39,7 @@ public class EnemyController : MonoBehaviour
     private bool _isMoving;
     public bool _isHurting;
     private bool _isDead;
+    private bool _moveBuffer = true;
 
     //Animation switches
     public bool _attackAnimation;
@@ -60,13 +62,12 @@ public class EnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!_isDead && !_isHurting)
+        if (!_isDead && !_isHurting && _moveBuffer)
         {
             if (_isMoving)
             {
                 enemyGraphics.SetBool("isWalking", true);
                 Vector2 direction = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);
-                //Debug.Log(direction);
                 moveAction.MoveProcess(direction.normalized);
             }
             else
@@ -101,13 +102,15 @@ public class EnemyController : MonoBehaviour
                 break;
             case EnemyState.ATTACK:
                 _attackAnimation = true;
-                moveAction.MoveProcess(Vector2.zero);
                 enemyGraphics.SetBool("isAttacking", true);
+                _moveBuffer = false;
+                moveAction.MoveProcess(Vector2.zero);
                 break;
             case EnemyState.HURT:
                 _hurtAnimation = true;
                 enemyGraphics.SetBool("isHurting", true);
                 healthManager.Hurt(damageTaken);
+                moveAction.MoveProcess(Vector2.zero);
                 break;
             case EnemyState.DEATH:
                 _deathAnimation = true;
@@ -220,11 +223,13 @@ public class EnemyController : MonoBehaviour
             case EnemyState.ATTACK:
                 _isAttacking = false;
                 enemyGraphics.SetBool("isAttacking", false);
+                _attackAnimation = false;
+                _moveBuffer = true;
+                hitAction.WeakStrikeDeactivate();
                 break;
             case EnemyState.HURT:
                 _isHurting = false;
                 enemyGraphics.SetBool("isHurting", false);
-                moveAction.MoveProcess(Vector2.zero);
                 break;
             case EnemyState.DEATH:
                 break;

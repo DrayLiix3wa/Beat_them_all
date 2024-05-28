@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public HealthManager healthManager;
     public StaminaManager staminaManager;
     public CircleCollider2D collectCollider;
+    public Hit hitAction;
 
     public SO_player StatsPlayer; 
  
@@ -41,6 +42,8 @@ public class PlayerController : MonoBehaviour
     private bool _isInteracting;
 
     private Vector2 _inputDirection;
+
+    private bool _moveBuffer = true;
 
     //Animation switches
     public bool _attackAnimation;
@@ -78,7 +81,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-       if  (!_isDashing && !_isDead && !_isHurting)
+       if  (!_isDashing && !_isDead && !_isHurting && _moveBuffer)
         {
             if (_isMoving)
             {
@@ -108,7 +111,8 @@ public class PlayerController : MonoBehaviour
                 _attackAnimation = true;
                 staminaManager.Consume(weakHitStaminaCost);
                 playerGraphics.SetBool("isAttacking", true);
-               // moveAction.MoveProcess(Vector2.zero);
+                _moveBuffer = false;
+                moveAction.MoveProcess(Vector2.zero);
                 break;
             case PlayerState.HURT:
                 _hurtAnimation = true;
@@ -132,9 +136,10 @@ public class PlayerController : MonoBehaviour
                 break;
             case PlayerState.BIG_ATTACK:
                 _bigAttackAnimation = true;
+                _moveBuffer = false;
                 staminaManager.Consume(strongHitStaminaCost);
                 playerGraphics.SetBool("isBigAttacking", true);
-               // moveAction.MoveProcess(Vector2.zero);
+                moveAction.MoveProcess(Vector2.zero);
                 break;
             default:
                 break;
@@ -368,6 +373,9 @@ public class PlayerController : MonoBehaviour
             case PlayerState.ATTACK:
                 _isAttacking = false;
                 playerGraphics.SetBool("isAttacking", false);
+                _moveBuffer = true;
+                _attackAnimation = false;
+                hitAction.WeakStrikeDeactivate();
                 break;
             case PlayerState.HURT:
                 _isHurting = false;
@@ -386,6 +394,9 @@ public class PlayerController : MonoBehaviour
             case PlayerState.BIG_ATTACK:
                 _isBigAttacking = false;
                 playerGraphics.SetBool("isBigAttacking", false);
+                _moveBuffer = true;
+                _bigAttackAnimation = false;
+                hitAction.StrongStrikeDeactivate();
                 break;
             default:
                 break;

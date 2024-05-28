@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/Scenes/R\xE9mi DevRoom.unity"
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/DevRoomYann.unity
+    guid: d6e88ab243a05164d8e8e9da7f4c98a8
   m_configObjects: {}
