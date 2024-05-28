@@ -173,6 +173,7 @@ MonoBehaviour:
   itemValue: 10
   destroyDelay: 0.5
   type: 1
+  objectPool: {fileID: 11400000, guid: 7bfad14119ee58d4a9d7c6895268ed31, type: 2}
 --- !u!58 &6044144618010387459
 CircleCollider2D:
   m_ObjectHideFlags: 0

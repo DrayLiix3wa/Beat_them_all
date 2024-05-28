@@ -12,16 +12,25 @@ public class Collectable : MonoBehaviour
     public int itemValue;
     public float destroyDelay = 0.5f;
     public ItemType type;
+    private PoolsManager poolsManager;
+    public SO_objectPool objectPool;
 
     public enum ItemType
     {
         HEAL, STAMINA
     }
 
+    private void Start()
+    {
+        GameObject targetObject = GameObject.FindGameObjectWithTag("PoolsManager");
+        poolsManager = targetObject.GetComponent<PoolsManager>();
+    }
+
     public void Collect()
     {
         OnPickUp.Invoke();
-        Destroy(gameObject, destroyDelay);
+        poolsManager.ReturnObjectToPool(gameObject, objectPool.poolName);
+        //Destroy(gameObject, destroyDelay);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
