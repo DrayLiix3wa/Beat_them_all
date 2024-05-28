@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 [System.Serializable]
 public class Wave
 {
-    public GameObject[] _enemies;
-    public string word;
+    public SO_objectPool[] _enemies;
     public float spawnInterval;
 }
 
@@ -19,6 +19,7 @@ public class SpawnerEnemy : MonoBehaviour
     int waveCount = 0;
     bool isRunning = true;
     float _chrono = 0f;
+    public PoolsManager poolsManager;
 
     void Start()
     {
@@ -34,7 +35,7 @@ public class SpawnerEnemy : MonoBehaviour
 
         if (timerOnOff == false)
         {
-            if (gameObject.transform.childCount == 0)
+            if (CheckEnemieCount() == 0)
             {
                 waveCount++;
                 isRunning = true;
@@ -53,14 +54,20 @@ public class SpawnerEnemy : MonoBehaviour
         }
     }
 
+    int CheckEnemieCount()
+    {
+        return GameObject.FindGameObjectsWithTag("Enemy").Count(e => e.activeInHierarchy);
+    }
+
     IEnumerator Spawn(int waveID)
     {
         foreach (var e in myWaves[waveID]._enemies)
         {
             isRunning = true;
             Vector2 spawnPos = (Vector2)transform.position;
-            GameObject enemy = Instantiate(e, spawnPos, Quaternion.identity);
-            enemy.transform.parent = transform;
+            GameObject enemie = poolsManager.GetObjectFromPool(e.poolName);
+            enemie.transform.position = spawnPos;
+            //GameObject enemy = Instantiate(e, spawnPos, Quaternion.identity);
             yield return new WaitForSeconds(myWaves[waveID].spawnInterval);
             isRunning = false;
         }
