@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,16 +12,21 @@ public class StaminaBar : MonoBehaviour
     public Gradient gradient;
     public Image fill;
 
+    public TextMeshProUGUI textCurrent;
+    public TextMeshProUGUI textMax;
+
     public SO_player player;
 
     void Start()
     {
         SetMaxStamina();
+        textMax.text = player.maxStamina.ToString();
     }
 
     void Update()
     {
         SetStamina( player.stamina);
+        textCurrent.text = player.stamina.ToString();
     }
 
     public void SetMaxStamina()
@@ -37,4 +43,6 @@ public class StaminaBar : MonoBehaviour
 
         fill.color = gradient.Evaluate( slider.normalizedValue );
     }
+
+    
 }
