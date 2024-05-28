@@ -76,6 +76,10 @@ public class EnemyController : MonoBehaviour
             }
 
         }
+        else
+        {
+            enemyGraphics.SetBool("isWalking", false);
+        }
 
         _playerCollider = Physics2D.OverlapBox(playerDetector.position, playerDetectorSize, 0f, _playerLayerMask);
         if (_playerCollider)
@@ -97,20 +101,23 @@ public class EnemyController : MonoBehaviour
         switch (currentState)
         {
             case EnemyState.IDLE:
+                enemyGraphics.SetBool("isIdle", true);
                 break;
             case EnemyState.WALK:
                 break;
             case EnemyState.ATTACK:
                 _attackAnimation = true;
-                enemyGraphics.SetBool("isAttacking", true);
                 _moveBuffer = false;
                 moveAction.MoveProcess(Vector2.zero);
+                enemyGraphics.SetBool("isAttacking", true);
                 break;
             case EnemyState.HURT:
+                Debug.Log("Hurt");
                 _hurtAnimation = true;
                 enemyGraphics.SetBool("isHurting", true);
                 healthManager.Hurt(damageTaken);
                 moveAction.MoveProcess(Vector2.zero);
+                hitAction.WeakStrikeDeactivate();
                 break;
             case EnemyState.DEATH:
                 _deathAnimation = true;
@@ -217,15 +224,14 @@ public class EnemyController : MonoBehaviour
         switch (currentState)
         {
             case EnemyState.IDLE:
+                enemyGraphics.SetBool("isIdle", false);
                 break;
             case EnemyState.WALK:
                 break;
             case EnemyState.ATTACK:
                 _isAttacking = false;
-                enemyGraphics.SetBool("isAttacking", false);
-                _attackAnimation = false;
                 _moveBuffer = true;
-                hitAction.WeakStrikeDeactivate();
+                enemyGraphics.SetBool("isAttacking", false);
                 break;
             case EnemyState.HURT:
                 _isHurting = false;

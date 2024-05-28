@@ -409,6 +409,7 @@ MonoBehaviour:
   enemyGraphics: {fileID: 8356298520391696692}
   moveAction: {fileID: 3959612243456896102}
   healthManager: {fileID: 5584234368955149919}
+  hitAction: {fileID: 4188898290006887089}
   playerDetector: {fileID: 367577226183745251}
   playerDetectorSize: {x: 0.2, y: 0.1}
   _playerLayerMask:

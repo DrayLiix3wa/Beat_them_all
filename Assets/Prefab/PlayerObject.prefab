@@ -655,6 +655,7 @@ MonoBehaviour:
   healthManager: {fileID: 6464833806168118731}
   staminaManager: {fileID: 5652987970314357076}
   collectCollider: {fileID: 9197594402691106699}
+  hitAction: {fileID: 6066982115297043721}
   StatsPlayer: {fileID: 11400000, guid: 346ff318c8fda5244857707e49d9b303, type: 2}
   _isDashing: 0
   _isHurting: 0

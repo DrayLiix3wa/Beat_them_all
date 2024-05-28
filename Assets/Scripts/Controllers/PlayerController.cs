@@ -94,6 +94,10 @@ public class PlayerController : MonoBehaviour
             
             moveAction.MoveProcess(_inputDirection);
         }
+        else
+        {
+            playerGraphics.SetBool("isWalking", false);
+        }
 
 
     }
@@ -103,6 +107,7 @@ public class PlayerController : MonoBehaviour
         switch (currentState)
         {
             case PlayerState.IDLE:
+                playerGraphics.SetBool("isIdle", true);
                 break;
             case PlayerState.WALK:
                 //playerGraphics.SetBool("isWalking", true);
@@ -118,6 +123,10 @@ public class PlayerController : MonoBehaviour
                 _hurtAnimation = true;
                 playerGraphics.SetBool("isHurting", true);
                 healthManager.Hurt(damageTaken);
+                hitAction.WeakStrikeDeactivate();
+                _attackAnimation = false;
+                hitAction.StrongStrikeDeactivate();
+                _bigAttackAnimation = false;
                 break;
             case PlayerState.DEATH:
                 _deathAnimation = true;
@@ -367,6 +376,7 @@ public class PlayerController : MonoBehaviour
         switch (currentState)
         {
             case PlayerState.IDLE:
+                playerGraphics.SetBool("isIdle", false);
                 break;
             case PlayerState.WALK:
                 break;
@@ -395,8 +405,6 @@ public class PlayerController : MonoBehaviour
                 _isBigAttacking = false;
                 playerGraphics.SetBool("isBigAttacking", false);
                 _moveBuffer = true;
-                _bigAttackAnimation = false;
-                hitAction.StrongStrikeDeactivate();
                 break;
             default:
                 break;
