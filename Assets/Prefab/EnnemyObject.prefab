@@ -447,6 +447,7 @@ MonoBehaviour:
   _hurtDirection: {x: 0, y: 0}
   _hurtBuffer: 0
   _impulseSpeed: 0
+  hurtBox: {fileID: 8943449062418572518}
   onDeath:
     m_PersistentCalls:
       m_Calls:

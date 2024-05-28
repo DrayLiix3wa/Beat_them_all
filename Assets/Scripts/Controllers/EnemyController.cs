@@ -55,6 +55,7 @@ public class EnemyController : MonoBehaviour
     public float _impulseSpeed;
 
     private Rigidbody2D _rb2d;
+    public BoxCollider2D hurtBox;
 
     public UnityEvent onDeath;
 
@@ -160,6 +161,7 @@ public class EnemyController : MonoBehaviour
                 break;
             case EnemyState.DEATH:
                 _deathAnimation = true;
+                hurtBox.enabled = false;
                 moveAction.MoveProcess(Vector2.zero);
                 enemyGraphics.SetBool("isDead", true);
                 break;
