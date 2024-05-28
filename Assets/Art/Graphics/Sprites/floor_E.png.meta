@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8b51d455793b098439c6719fe8a92a9b
+guid: 2b1894c133cbedb4d8c243910626f0d4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,36 +97,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fence_E_0
+      name: floor_E_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 60
-        width: 136
-        height: 108
+        y: 0
+        width: 256
+        height: 129
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -60, y: -54}
-        - {x: -68, y: -50}
-        - {x: -68, y: -39}
-        - {x: -60, y: -35}
-        - {x: -52, y: -36}
-        - {x: 52, y: 16}
-        - {x: 52, y: 26}
-        - {x: 60, y: 30}
-        - {x: 68, y: 26}
-        - {x: 68, y: 10}
-        - {x: 60, y: 6}
-        - {x: 52, y: 10}
-        - {x: -52, y: -41}
-        - {x: -52, y: -50}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb46ba5b1402d714e814591051795067
-      internalID: -2033669468
+      spriteID: e390d886107786641b707b58f25e33e0
+      internalID: -1890249875
       vertices: []
       indices: 
       edges: []
@@ -142,7 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      fence_E_0: -2033669468
+      floor_E_0: -1890249875
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
