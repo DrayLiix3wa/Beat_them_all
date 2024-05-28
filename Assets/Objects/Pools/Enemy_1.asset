@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71b2b6c2f5d31da4c825cc7b1b863818, type: 3}
-  m_Name: FarWest
+  m_Script: {fileID: 11500000, guid: cc1861e4dda966449b7c9feaad9f8b64, type: 3}
+  m_Name: Enemy_1
   m_EditorClassIdentifier: 
-  levelName: FarWest
-  isWin: 0
-  isLoose: 1
+  poolName: Ennemy_1
+  prefab: {fileID: 5352037557489036431, guid: acf076d7d3417f84dbce4ff0afce40c1, type: 3}
+  initialSize: 50
+  objectsActive: 0
+  objectsInactive: 0
