@@ -427,6 +427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  pool: {fileID: 11400000, guid: 8615cf67e2292f6489dd3751d3dcf928, type: 2}
   enemyGraphics: {fileID: 8356298520391696692}
   moveAction: {fileID: 3959612243456896102}
   healthManager: {fileID: 5584234368955149919}

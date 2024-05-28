@@ -17,6 +17,8 @@ public class EnemyController : MonoBehaviour
 
     public EnemyState currentState;
 
+    public SO_objectPool pool;
+    private PoolsManager poolManager;
 
     //References
     [Header("References")]
@@ -53,6 +55,7 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        poolManager = GameObject.FindGameObjectWithTag("PoolsManager").GetComponent<PoolsManager>();
     }
 
     void Update()
@@ -210,7 +213,7 @@ public class EnemyController : MonoBehaviour
                 if (!_deathAnimation)
                 {
                     onDeath.Invoke();
-                    Destroy(gameObject);
+                    poolManager.ReturnObjectToPool(gameObject, pool.poolName);
                 }
                 break;
             default:
