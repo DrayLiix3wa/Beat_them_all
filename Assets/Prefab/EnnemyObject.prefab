@@ -433,7 +433,7 @@ MonoBehaviour:
   healthManager: {fileID: 5584234368955149919}
   hitAction: {fileID: 4188898290006887089}
   playerDetector: {fileID: 367577226183745251}
-  playerDetectorSize: {x: 0.2, y: 0.1}
+  playerDetectorSize: {x: 0.2, y: 1.2}
   _playerLayerMask:
     serializedVersion: 2
     m_Bits: 64
