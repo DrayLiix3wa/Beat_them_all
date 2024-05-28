@@ -59,4 +59,9 @@ public class LevelManager : MonoBehaviour
                 break;
         }
     }
+
+    public void KillCountAdd()
+    {
+        killCount++;
+    }
 }
