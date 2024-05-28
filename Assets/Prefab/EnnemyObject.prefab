@@ -279,6 +279,7 @@ MonoBehaviour:
   damageTags:
   - PlayerHit
   enemyController: {fileID: 7125728747779743007}
+  hurtSpeed: 100
 --- !u!1 &5352037557489036431
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,10 +439,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _isHurting: 0
+  _moveBuffer: 1
   _attackAnimation: 0
   _deathAnimation: 0
   _hurtAnimation: 0
   damageTaken: 0
+  _hurtDirection: {x: 0, y: 0}
+  _hurtBuffer: 0
+  _impulseSpeed: 0
   onDeath:
     m_PersistentCalls:
       m_Calls:

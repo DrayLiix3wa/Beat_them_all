@@ -7,6 +7,7 @@ public class EnnemyHitBoxManager : MonoBehaviour
 {
     public string[] damageTags;
     public EnemyController enemyController;
+    public float hurtSpeed = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,9 @@ public class EnnemyHitBoxManager : MonoBehaviour
         {
 
             enemyController.damageTaken = collision.GetComponent<HitDamageValue>().hitDamageValue;
+            enemyController._hurtDirection = transform.position - collision.transform.position;
+            enemyController._impulseSpeed = hurtSpeed;
+            enemyController._moveBuffer = false;
             enemyController._isHurting = true;
             
         }

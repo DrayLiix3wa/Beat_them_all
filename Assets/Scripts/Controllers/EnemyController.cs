@@ -41,7 +41,7 @@ public class EnemyController : MonoBehaviour
     private bool _isMoving;
     public bool _isHurting;
     private bool _isDead;
-    private bool _moveBuffer = true;
+    public bool _moveBuffer = true;
 
     //Animation switches
     public bool _attackAnimation;
@@ -50,12 +50,19 @@ public class EnemyController : MonoBehaviour
 
     public int damageTaken;
 
+    public Vector2 _hurtDirection;
+    public bool _hurtBuffer = false;
+    public float _impulseSpeed;
+
+    private Rigidbody2D _rb2d;
+
     public UnityEvent onDeath;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         poolManager = GameObject.FindGameObjectWithTag("PoolsManager").GetComponent<PoolsManager>();
+        _rb2d = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -91,6 +98,24 @@ public class EnemyController : MonoBehaviour
         else
         {
             enemyGraphics.SetBool("isWalking", false);
+
+            if (_hurtBuffer)
+            {
+
+                if (_hurtDirection.x > 0f && transform.localScale.x > 0f)
+                {
+                    transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+                }
+                else if (_hurtDirection.x < 0f && transform.localScale.x < 0f)
+                {
+                    transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+                }
+
+                _rb2d.AddForce(_hurtDirection * _impulseSpeed, ForceMode2D.Impulse);
+                _hurtBuffer = false;
+                
+            }
+
         }
 
         _playerCollider = Physics2D.OverlapBox(playerDetector.position, playerDetectorSize, 0f, _playerLayerMask);
@@ -125,10 +150,12 @@ public class EnemyController : MonoBehaviour
                 break;
             case EnemyState.HURT:
                 Debug.Log("Hurt");
-                _hurtAnimation = true;
-                enemyGraphics.SetBool("isHurting", true);
-                healthManager.Hurt(damageTaken);
                 moveAction.MoveProcess(Vector2.zero);
+                _hurtAnimation = true;
+                _moveBuffer = false;
+                enemyGraphics.SetBool("isHurting", true);
+                _hurtBuffer = true;
+                healthManager.Hurt(damageTaken);
                 hitAction.WeakStrikeDeactivate();
                 break;
             case EnemyState.DEATH:
@@ -248,6 +275,7 @@ public class EnemyController : MonoBehaviour
             case EnemyState.HURT:
                 _isHurting = false;
                 enemyGraphics.SetBool("isHurting", false);
+                _moveBuffer = true;
                 break;
             case EnemyState.DEATH:
                 break;

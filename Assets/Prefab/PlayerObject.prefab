@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 6013938427593080361}
   - component: {fileID: 205686223603719387}
   - component: {fileID: 399751819431924364}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HitBox
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -161,6 +161,12 @@ MonoBehaviour:
   - EnnemyHit
   playerController: {fileID: 4025436369105142048}
   audioController: {fileID: 6080060414389514459}
+  onGuardBreak:
+    m_PersistentCalls:
+      m_Calls: []
+  rb2d: {fileID: 1666212626196770515}
+  hurtSpeed: 1
+  blockSpeed: 0.5
 --- !u!1 &3623685385491560448
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +700,11 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
+  onStaminaNotEnough:
+    m_PersistentCalls:
+      m_Calls: []
+  _hurtDirection: {x: 0, y: 0}
+  _impulseSpeed: 0
 --- !u!50 &1666212626196770515
 Rigidbody2D:
   serializedVersion: 4

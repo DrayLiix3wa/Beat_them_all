@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 _inputDirection;
 
-    private bool _moveBuffer = true;
+    public bool _moveBuffer = true;
 
     //Animation switches
     public bool _attackAnimation;
@@ -63,12 +63,19 @@ public class PlayerController : MonoBehaviour
     public int damageTaken;
 
     public UnityEvent onDeath;
+    public UnityEvent onStaminaNotEnough;
+
+    public Vector2 _hurtDirection;
+    public bool _hurtBuffer = false;
+    public float _impulseSpeed;
+
+    private Rigidbody2D _rb2d;
 
 
     //Start is called before the first frame update
     void Start()
     {
-        
+        _rb2d = GetComponent<Rigidbody2D>();
     }
 
     //Update is called once per frame
@@ -81,7 +88,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-       if  (!_isDashing && !_isDead && !_isHurting && _moveBuffer)
+       if  (!_isDashing && !_isDead && !_isHurting && _moveBuffer) 
         {
             if (_isMoving)
             {
@@ -97,6 +104,24 @@ public class PlayerController : MonoBehaviour
         else
         {
             playerGraphics.SetBool("isWalking", false);
+
+            if (_hurtBuffer)
+            {
+
+                    if (_hurtDirection.x > 0f && transform.localScale.x > 0f)
+                    {
+                        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+                    }
+                    else if (_hurtDirection.x < 0f && transform.localScale.x < 0f)
+                    {
+                        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+                    }
+
+                    _rb2d.AddForce(_hurtDirection * _impulseSpeed, ForceMode2D.Impulse);
+                    _hurtBuffer = false;
+                _moveBuffer = true;
+            }
+
         }
 
 
@@ -122,6 +147,7 @@ public class PlayerController : MonoBehaviour
             case PlayerState.HURT:
                 _hurtAnimation = true;
                 playerGraphics.SetBool("isHurting", true);
+                _hurtBuffer = true;
                 healthManager.Hurt(damageTaken);
                 hitAction.WeakStrikeDeactivate();
                 _attackAnimation = false;
@@ -451,7 +477,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-
+                    onStaminaNotEnough.Invoke();
                 }
                 break;
             case InputActionPhase.Canceled:
@@ -476,7 +502,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-
+                    onStaminaNotEnough.Invoke();
                 }
                 break;
             case InputActionPhase.Canceled:
@@ -500,7 +526,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-
+                    onStaminaNotEnough.Invoke();
                 }
                 break;
             case InputActionPhase.Canceled:
