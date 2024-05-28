@@ -11,6 +11,7 @@ public class Dash : MonoBehaviour
     [SerializeField]
     public Rigidbody2D rb2d;
     public TrailRenderer trailRenderer;
+    public AudioController audioController;
 
     [Header("Stats")]
     //public float dashRange;
@@ -52,6 +53,8 @@ public class Dash : MonoBehaviour
         {
             direction = new Vector2(transform.localScale.x * dashSpeed, 0f);
         }
+
+        audioController.PlayDashkSound();
 
 
     }

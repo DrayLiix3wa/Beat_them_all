@@ -9,6 +9,7 @@ public class PlayerHitBoxManager : MonoBehaviour
 
     public string[] damageTags;
     public PlayerController playerController;
+    public AudioController audioController;
     
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class PlayerHitBoxManager : MonoBehaviour
                 if (playerController.staminaManager.current >= playerController.blockCost)
                 {
                     playerController.staminaManager.Consume(playerController.blockCost);
+                    audioController.PlayBlockSound();
                 }
                 else
                 {
