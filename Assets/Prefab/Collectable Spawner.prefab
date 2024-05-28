@@ -45,5 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _collectablePrefabs:
-  - {fileID: 5387465516719299303, guid: d3b0baa53d559ad4bbb2ae34b25a20bd, type: 3}
-  - {fileID: 2310775598541832682, guid: d049bd400bcb1244abaea274d419fdaf, type: 3}
+  - {fileID: 11400000, guid: 7bfad14119ee58d4a9d7c6895268ed31, type: 2}
+  - {fileID: 11400000, guid: de699ddf083291945ba8461403b48d3d, type: 2}
+  poolManager: {fileID: 0}
