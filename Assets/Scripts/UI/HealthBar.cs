@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,16 +12,21 @@ public class HealthBar : MonoBehaviour
     public Gradient gradient;
     public Image fill;
 
+    public TextMeshProUGUI textCurrent;
+    public TextMeshProUGUI textMax;
+
     public SO_player player;
 
     void Start()
     {
         SetMaxHealth();
+        textMax.text = player.maxHealth.ToString();
     }
 
     void Update()
     {
         SetHealth( player.health );
+        textCurrent.text = player.health.ToString();
     }
 
     public void SetMaxHealth()
