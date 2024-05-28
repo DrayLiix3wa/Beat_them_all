@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 [System.Serializable]
 public class Wave
@@ -23,7 +22,7 @@ public class SpawnerEnemy : MonoBehaviour
 
     void Start()
     {
-        if (isRunning == true && waveCount <= myWaves.Length)
+        if (isRunning == true && waveCount < myWaves.Length)
         {
             StartCoroutine(Spawn(waveCount));
         }
@@ -33,26 +32,28 @@ public class SpawnerEnemy : MonoBehaviour
     {
         _chrono += Time.deltaTime;
 
-        if (timerOnOff == false)
+        if ( timerOnOff == false )
         {
-            if (CheckEnemieCount() == 0)
+            if ( CheckEnemieCount() == 0 )
             {
                 waveCount++;
-                if(waveCount <= myWaves.Length)
+                if( waveCount < myWaves.Length )
                 {
                     isRunning = true;
                     Start();
                 }
-                else { isRunning = false; }
+                else { 
+                    isRunning = false; 
+                }
                 
             }
         }
         else
         {
-            if (_chrono >= _timeVague)
+            if ( _chrono >= _timeVague )
             {
                 waveCount++;
-                if (waveCount <= myWaves.Length)
+                if ( waveCount < myWaves.Length )
                 {
                     isRunning = true;
                     Start();
@@ -80,10 +81,11 @@ public class SpawnerEnemy : MonoBehaviour
             Vector2 spawnPos = (Vector2)transform.position;
             GameObject enemie = poolsManager.GetObjectFromPool(e.poolName);
             enemie.transform.position = spawnPos;
-            //GameObject enemy = Instantiate(e, spawnPos, Quaternion.identity);
+
             yield return new WaitForSeconds(myWaves[waveID].spawnInterval);
-            isRunning = false;
         }
+
+        isRunning = false;
 
     }
 }

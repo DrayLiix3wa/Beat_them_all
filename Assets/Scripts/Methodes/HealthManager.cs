@@ -38,6 +38,11 @@ public class HealthManager : MonoBehaviour
 
     #region Public Methods
 
+    public void OnEnable()
+    {
+        ResetHealth();
+    }
+
     public void Hurt( int damage )
     {
         if ( current > 0 )
@@ -94,6 +99,12 @@ public class HealthManager : MonoBehaviour
     #endregion
 
     #region Private Methods
+
+    void ResetHealth()
+    {
+        current = max;
+        LogDebug( "La santé a été réinitialisée à " + current );
+    }
 
     /// <summary>
     /// Fonction de log en mode debug pour afficher des messages dans la console Unity
