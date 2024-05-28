@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [System.Serializable]
 public class Wave
@@ -13,8 +14,11 @@ public class Wave
 public class SpawnerEnemy : MonoBehaviour
 {
     public Wave[] myWaves;
+    public bool timerOnOff = false;
+    public float _timeVague;
     int waveCount = 0;
     bool isRunning = true;
+    float _chrono = 0f;
 
     void Start()
     {
@@ -26,11 +30,26 @@ public class SpawnerEnemy : MonoBehaviour
 
     void Update()
     {
-        if(gameObject.transform.childCount == 0)
+        _chrono += Time.deltaTime;
+
+        if (timerOnOff == false)
         {
-            waveCount++;
-            isRunning = true;
-            Start();
+            if (gameObject.transform.childCount == 0)
+            {
+                waveCount++;
+                isRunning = true;
+                Start();
+            }
+        }
+        else
+        {
+            if (_chrono >= _timeVague)
+            {
+                waveCount++;
+                isRunning = true;
+                Start();
+                _chrono = 0f;
+            }
         }
     }
 
