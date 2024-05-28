@@ -160,6 +160,7 @@ public class EnemyController : MonoBehaviour
                 break;
             case EnemyState.DEATH:
                 _deathAnimation = true;
+                moveAction.MoveProcess(Vector2.zero);
                 enemyGraphics.SetBool("isDead", true);
                 break;
             default:
