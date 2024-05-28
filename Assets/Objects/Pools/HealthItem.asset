@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1861e4dda966449b7c9feaad9f8b64, type: 3}
   m_Name: HealthItem
   m_EditorClassIdentifier: 
-  poolName: 
-  prefab: {fileID: 0}
-  initialSize: 0
+  poolName: HealthItem
+  prefab: {fileID: 5387465516719299303, guid: d3b0baa53d559ad4bbb2ae34b25a20bd, type: 3}
+  initialSize: 30
   objectsActive: 0
   objectsInactive: 0

@@ -26,4 +26,5 @@ public class SO_objectPool : ScriptableObject
         objectsActive = 0;
         objectsInactive = 0;
     }
+    
 }

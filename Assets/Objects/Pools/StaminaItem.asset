@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1861e4dda966449b7c9feaad9f8b64, type: 3}
   m_Name: StaminaItem
   m_EditorClassIdentifier: 
-  poolName: 
-  prefab: {fileID: 0}
-  initialSize: 0
+  poolName: StaminaItem
+  prefab: {fileID: 2310775598541832682, guid: d049bd400bcb1244abaea274d419fdaf, type: 3}
+  initialSize: 30
   objectsActive: 0
   objectsInactive: 0
