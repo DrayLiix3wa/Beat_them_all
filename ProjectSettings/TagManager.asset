@@ -9,6 +9,7 @@ TagManager:
   - PlayerCollect
   - EnnemyHit
   - Enemy
+  - PoolsManager
   layers:
   - Default
   - TransparentFX
