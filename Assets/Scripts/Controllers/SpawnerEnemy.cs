@@ -23,7 +23,7 @@ public class SpawnerEnemy : MonoBehaviour
 
     void Start()
     {
-        if (isRunning == true)
+        if (isRunning == true && waveCount <= myWaves.Length)
         {
             StartCoroutine(Spawn(waveCount));
         }
@@ -38,8 +38,13 @@ public class SpawnerEnemy : MonoBehaviour
             if (CheckEnemieCount() == 0)
             {
                 waveCount++;
-                isRunning = true;
-                Start();
+                if(waveCount <= myWaves.Length)
+                {
+                    isRunning = true;
+                    Start();
+                }
+                else { isRunning = false; }
+                
             }
         }
         else
@@ -47,9 +52,17 @@ public class SpawnerEnemy : MonoBehaviour
             if (_chrono >= _timeVague)
             {
                 waveCount++;
-                isRunning = true;
-                Start();
-                _chrono = 0f;
+                if (waveCount <= myWaves.Length)
+                {
+                    isRunning = true;
+                    Start();
+                    _chrono = 0f;
+                }
+                else 
+                { 
+                    isRunning = false; 
+                    _chrono = 0f;
+                }
             }
         }
     }
