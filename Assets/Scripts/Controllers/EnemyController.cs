@@ -63,6 +63,15 @@ public class EnemyController : MonoBehaviour
         OnStateUpdate();
     }
 
+    private void OnEnable()
+    {
+        if (currentState == EnemyState.DEATH)
+        {
+            _isDead = false;
+            TransitionToState(EnemyState.IDLE);
+        }
+    }
+
     void FixedUpdate()
     {
         if (!_isDead && !_isHurting && _moveBuffer)

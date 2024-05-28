@@ -98,7 +98,9 @@ public class PoolsManager : MonoBehaviour
         // On vérifie si l'objet appartient bien à la pool
         if ( poolDictionary.ContainsKey( poolName ) )
         {
+
             obj.SetActive( false );
+           
             poolDictionary[poolName].SO_pool.objectsActive--;
             poolDictionary[poolName].SO_pool.objectsInactive++;
             LogDebug( "Objet retourné dans la pool " + poolName );
