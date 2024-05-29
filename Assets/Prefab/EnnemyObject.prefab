@@ -280,6 +280,9 @@ MonoBehaviour:
   - PlayerHit
   enemyController: {fileID: 7125728747779743007}
   hurtSpeed: 100
+  onDamaged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5352037557489036431
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,6 +451,7 @@ MonoBehaviour:
   _hurtBuffer: 0
   _impulseSpeed: 0
   hurtBox: {fileID: 1191604877831894274}
+  direction: {x: 0, y: 0}
   onDeath:
     m_PersistentCalls:
       m_Calls:
