@@ -78,6 +78,9 @@ GameObject:
   - component: {fileID: 6013938427593080361}
   - component: {fileID: 205686223603719387}
   - component: {fileID: 399751819431924364}
+  - component: {fileID: 9160020440639218117}
+  - component: {fileID: 1142349664800110071}
+  - component: {fileID: 3734779420236715438}
   m_Layer: 6
   m_Name: HitBox
   m_TagString: Player
@@ -165,8 +168,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   rb2d: {fileID: 1666212626196770515}
-  hurtSpeed: 4
-  blockSpeed: 2
 --- !u!1 &3623685385491560448
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,7 +856,7 @@ MonoBehaviour:
   current: 0
   cooldown: 2
   regenRate: 0.1
-  debugMode: 0
+  debugMode: 1
   _chrono: 0
 --- !u!82 &6110422022097968860
 AudioSource:
