@@ -46,8 +46,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentGoal: 0
   timeToWin: 180
-  killsToWin: 30
+  killsToWin: 20
   chrono: 0
-  StateLevel: {fileID: 11400000, guid: 2c305d59fb8b629449ec6ca1406e1b8c, type: 2}
+  StateLevel: {fileID: 11400000, guid: 665f227abbf85aa459a285ec5ceebefa, type: 2}
   StatsPlayer: {fileID: 11400000, guid: 346ff318c8fda5244857707e49d9b303, type: 2}
   currentHealth: 0
+  OnLevelFail:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: GameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
