@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 2835683642196439542}
   - component: {fileID: 8943449062418572518}
   - component: {fileID: 5013762535691641267}
+  - component: {fileID: 1612409228344570071}
   m_Layer: 0
   m_Name: HitBox
   m_TagString: Untagged
@@ -347,6 +348,34 @@ MonoBehaviour:
   - PlayerHit
   enemyController: {fileID: 7125728747779743007}
   hurtSpeed: 100
+  onDamaged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1612409228344570071}
+        m_TargetAssemblyTypeName: TickFreeze, Assembly-CSharp
+        m_MethodName: StartTickFreeze
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.12
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1612409228344570071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338257813457060759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a39dfaee4346e47b729be0216e60e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTimeScaleFreeze: 0
 --- !u!1 &5352037557489036431
 GameObject:
   m_ObjectHideFlags: 0
