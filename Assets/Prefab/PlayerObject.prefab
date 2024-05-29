@@ -78,6 +78,9 @@ GameObject:
   - component: {fileID: 6013938427593080361}
   - component: {fileID: 205686223603719387}
   - component: {fileID: 399751819431924364}
+  - component: {fileID: 9160020440639218117}
+  - component: {fileID: 1142349664800110071}
+  - component: {fileID: 3734779420236715438}
   m_Layer: 6
   m_Name: HitBox
   m_TagString: Player
@@ -167,6 +170,62 @@ MonoBehaviour:
   rb2d: {fileID: 1666212626196770515}
   hurtSpeed: 1
   blockSpeed: 0.5
+  isInvincible: 0
+  onDamaged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9160020440639218117}
+        m_TargetAssemblyTypeName: PlayerDamagedInvincibility, Assembly-CSharp
+        m_MethodName: StartInvincibility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &9160020440639218117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556799860638286079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f3f5eff19286a4c8b21d15a6cf77e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _invincibilityDuration: 0.8
+  _flashColor: {r: 0.8490566, g: 0.04405483, b: 0.04405483, a: 0.46666667}
+  _numberOfFlashes: 6
+--- !u!114 &1142349664800110071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556799860638286079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e0c95d93f2c1440b12be5893acdfa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3734779420236715438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556799860638286079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5da5a918d71e8044bc4985a58e5a5e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 4763258514659339421}
 --- !u!1 &3623685385491560448
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +746,7 @@ MonoBehaviour:
   StatsPlayer: {fileID: 11400000, guid: 346ff318c8fda5244857707e49d9b303, type: 2}
   _isDashing: 0
   _isHurting: 0
+  _moveBuffer: 1
   _attackAnimation: 0
   _deathAnimation: 0
   _hurtAnimation: 0
@@ -704,6 +764,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _hurtDirection: {x: 0, y: 0}
+  _hurtBuffer: 0
   _impulseSpeed: 0
 --- !u!50 &1666212626196770515
 Rigidbody2D:
@@ -852,7 +913,7 @@ MonoBehaviour:
   current: 0
   cooldown: 2
   regenRate: 0.1
-  debugMode: 0
+  debugMode: 1
   _chrono: 0
 --- !u!82 &6110422022097968860
 AudioSource:

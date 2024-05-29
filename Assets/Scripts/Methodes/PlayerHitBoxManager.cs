@@ -15,8 +15,9 @@ public class PlayerHitBoxManager : MonoBehaviour
     public Rigidbody2D rb2d;
     public float hurtSpeed = 1;
     public float blockSpeed = 0.5f;
+    public bool isInvincible;
 
-
+    public UnityEvent onDamaged = new UnityEvent();
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,12 @@ public class PlayerHitBoxManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (isInvincible)
+        {
+            Debug.Log("Invincible !");
+            return;
+        }
+
         Debug.Log("Got Hit !");
         
         if (damageTags.Contains(collision.tag))
@@ -60,6 +67,7 @@ public class PlayerHitBoxManager : MonoBehaviour
             }
             else
             {
+                onDamaged.Invoke();
                 playerController.damageTaken = collision.GetComponent<HitDamageValue>().hitDamageValue;
                 playerController._impulseSpeed = hurtSpeed;
                 playerController._isHurting = true;
