@@ -19,7 +19,6 @@ public class LevelManager : MonoBehaviour
 
     [Header("Stats")]
     public float chrono = 0f;
-    public float killCount = 0f;
 
     public SO_Level StateLevel;
     public SO_player StatsPlayer;
@@ -40,7 +39,7 @@ public class LevelManager : MonoBehaviour
                 {
                     StateLevel.isLoose = true;
                 }
-                else if(killCount >= killsToWin)
+                else if(StateLevel.killCount >= killsToWin)
                 {
                     StateLevel.isWin = true;
                 }
@@ -58,10 +57,5 @@ public class LevelManager : MonoBehaviour
             default:
                 break;
         }
-    }
-
-    public void KillCountAdd()
-    {
-        killCount++;
     }
 }
