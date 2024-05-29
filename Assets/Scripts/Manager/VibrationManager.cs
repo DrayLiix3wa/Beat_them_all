@@ -6,15 +6,17 @@ using UnityEngine.InputSystem;
 [AddComponentMenu("Dirk Dynamite/VibrationManager")]
 public class VibrationManager : MonoBehaviour
 {
-    public void Vibrate( float duration, float intensity )
+    public float defaultDuration = 0.5f;
+
+    public void Vibrate( float intensity )
     {
-        StartCoroutine(VibrateCoroutine( duration, intensity ) );
+        StartCoroutine(VibrateCoroutine( intensity ) );
     }
 
-    private IEnumerator VibrateCoroutine( float duration, float intensity )
+    private IEnumerator VibrateCoroutine( float intensity )
     {
         Gamepad.current.SetMotorSpeeds( intensity, intensity );
-        yield return new WaitForSeconds( duration );
+        yield return new WaitForSeconds( defaultDuration );
 
         StopVibration();
     }
