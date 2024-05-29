@@ -5,9 +5,9 @@ using UnityEngine;
 public class SpriteFlash : MonoBehaviour
 {
     public SpriteRenderer _spriteRenderer;
-    private void Awake()
+    public void StartSpriteFlash(float flashDuration, Color flashColor, int numberOfFlashes)
     {
-        //_spriteRenderer = GetComponent<SpriteRenderer>();
+        StartCoroutine(FlashCoroutine(flashDuration, flashColor, numberOfFlashes));
     }
 
     public IEnumerator FlashCoroutine(float flashDuration, Color flashColor, int numberOfFlashes)
