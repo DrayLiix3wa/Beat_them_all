@@ -265,6 +265,8 @@ GameObject:
   - component: {fileID: 8943449062418572518}
   - component: {fileID: 5013762535691641267}
   - component: {fileID: 1612409228344570071}
+  - component: {fileID: 4520424863588005684}
+  - component: {fileID: 7121034058285059038}
   m_Layer: 0
   m_Name: HitBox
   m_TagString: Untagged
@@ -363,6 +365,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7121034058285059038}
+        m_TargetAssemblyTypeName: EnemyDamagedFlash, Assembly-CSharp
+        m_MethodName: StartSpriteFlash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.12
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1612409228344570071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,6 +390,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTimeScaleFreeze: 0
+--- !u!114 &4520424863588005684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338257813457060759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5da5a918d71e8044bc4985a58e5a5e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 5745631015634168016}
+--- !u!114 &7121034058285059038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338257813457060759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d1eb23dcb6c3214782adee347b26d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flashDuration: 0.5
+  _flashColor: {r: 1, g: 0, b: 0, a: 0.78431374}
+  _numberOfFlashes: 5
 --- !u!1 &5352037557489036431
 GameObject:
   m_ObjectHideFlags: 0
