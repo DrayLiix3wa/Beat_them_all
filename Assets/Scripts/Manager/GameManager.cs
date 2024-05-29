@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 [AddComponentMenu("Dirk Dynamite/GameManager")]
 [DisallowMultipleComponent]
@@ -12,7 +13,8 @@ public class GameManager : MonoBehaviour
         START,
         PLAY,
         PAUSE,
-        END
+        END,
+        WIN
     }
 
     [Header("Game State")]
@@ -31,10 +33,13 @@ public class GameManager : MonoBehaviour
     public UnityEvent onPauseEnter = new UnityEvent();
     public UnityEvent onPauseExit = new UnityEvent();
     public UnityEvent onEnd = new UnityEvent();
+    public UnityEvent onWin = new UnityEvent();
 
+    public SO_Level StateLevel;
 
     #region Unity Lifecycle
-    private void Start()
+
+    private void Awake()
     {
         TransitionToState(GameState.START);
     }
@@ -52,18 +57,29 @@ public class GameManager : MonoBehaviour
         {
             case GameState.START:
                 onStart.Invoke();
+                Time.timeScale = 0;
                 isStart = true;
                 break;
             case GameState.PLAY:
+                Time.timeScale = 1;
                 onPlay.Invoke();
                 isPlay = true;
                 break;
             case GameState.PAUSE:
+                Time.timeScale = 0;
                 onPauseEnter.Invoke();
                 isPause = true;
                 break;
             case GameState.END:
-                onEnd.Invoke();
+                Time.timeScale = 0;
+                if (StateLevel.isWin)
+                {
+                    onWin.Invoke();
+                }
+                else
+                {
+                    onEnd.Invoke();
+                }
                 isEnd = true;
                 break;
             default:
@@ -85,7 +101,7 @@ public class GameManager : MonoBehaviour
                 {
                     TransitionToState(GameState.PAUSE);
                 }
-                else if (isEnd)
+                else if (isEnd || StateLevel.isWin)
                 {
                     TransitionToState(GameState.END);
                 }
@@ -99,7 +115,7 @@ public class GameManager : MonoBehaviour
                 {
                     TransitionToState(GameState.PAUSE);
                 }
-                else if (isEnd)
+                else if (isEnd || StateLevel.isWin)
                 {
                     TransitionToState(GameState.END);
                 }
@@ -113,7 +129,7 @@ public class GameManager : MonoBehaviour
                 {
                     TransitionToState(GameState.PLAY);
                 }
-                else if (isEnd)
+                else if (isEnd || StateLevel.isWin)
                 {
                     TransitionToState(GameState.END);
                 }
@@ -150,6 +166,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.PAUSE:
                 onPauseExit.Invoke();
+                Time.timeScale = 1;
                 isPause = false;
                 break;
             case GameState.END:
@@ -174,6 +191,51 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void StartGame()
+    {
+        isPlay = true;
+    }
+
+    public void PauseGame()
+    {
+        isPause = true;
+    }
+
+    public void ResumeGame()
+    {
+        isPlay = true;
+    }
     #endregion
 
+    public void GameOver()
+    {
+        isEnd = true;
+    }
+    
+    public void RestartGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
+
+    public void Pause(InputAction.CallbackContext context)
+    {
+        switch (context.phase)
+        {
+            case InputActionPhase.Performed:
+                if ( isPlay )
+                {
+                    PauseGame();
+                }
+                else if ( isPause )
+                {
+                    ResumeGame();
+                }
+                break;
+            case InputActionPhase.Canceled:
+                    break;
+            default:
+                break;
+        }
+    }
 }
