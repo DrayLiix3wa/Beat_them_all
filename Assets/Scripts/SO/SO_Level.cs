@@ -16,4 +16,11 @@ public class SO_Level : ScriptableObject
     {
         killCount++;
     }
+
+    private void OnEnable()
+    {
+        killCount = 0;
+        isWin = false;
+        isLoose = true;
+    }
 }
