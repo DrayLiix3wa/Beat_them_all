@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 [AddComponentMenu("Dirk Dynamite/CameraFollow")]
@@ -7,6 +8,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
+    [Header("Camera Follow")]
     public Transform anchor;
     public Vector3 posOffset;
 
@@ -27,4 +29,5 @@ public class CameraFollow : MonoBehaviour
     {
         transform.position = Vector3.SmoothDamp(transform.position, player.transform.position, ref velocity, timeOffset);
     }*/
+
 }

@@ -8,7 +8,8 @@ public class CameraShake : MonoBehaviour
 
     [Header("Shake Settings")]
     public AnimationCurve curve;
-    public float ShakeTime = 1f;
+
+    public CameraFollow cameraFollow;
 
     [Space(10)]
     [Header("Debug")]
@@ -16,43 +17,33 @@ public class CameraShake : MonoBehaviour
 
     #endregion
 
-    #region Private Variables
-    private Transform _transformCamera;
-    private Vector3 _initialOffset;
-
-    #endregion
-
-    #region Unity Lifecycle
-    void Awake()
-    {
-        _transformCamera = Camera.main.transform;
-        _initialOffset = transform.position - _transformCamera.position;
-    }
-    #endregion
-
     #region Public Methods
-    public void ShakeCamera()
+    public void ShakeCamera(float shakeTime)
     {
         LogDebug("Shake Camera");
-        StartCoroutine(Shake());
+        StartCoroutine(Shake(shakeTime));
     }
     #endregion
 
-    private IEnumerator Shake()
+    private IEnumerator Shake(float shakeTime)
     {
         float timer = 0f;
 
-        while (timer < ShakeTime)
+        while (timer < shakeTime)
         {
             timer += Time.deltaTime;
-            float strength = curve.Evaluate(timer / ShakeTime);
+            float strength = curve.Evaluate(timer / shakeTime);
 
-            transform.position = _transformCamera.position + _initialOffset + Random.insideUnitSphere * strength;
+            cameraFollow.posOffset = Random.insideUnitCircle * strength;
+
+            cameraFollow.posOffset.z = -10;
 
             yield return null;
         }
 
-        transform.position = _transformCamera.position + _initialOffset;
+        cameraFollow.posOffset.x = 0;
+        cameraFollow.posOffset.y = 0;
+
     }
 
     #region Private Methods
