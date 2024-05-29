@@ -251,7 +251,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.028630465, y: -0.12273502}
+  m_Offset: {x: 0.036551952, y: -0.11217302}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -262,7 +262,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.40592355, y: 0.8358762}
+  m_Size: {x: 0.6963787, y: 1.1104885}
   m_EdgeRadius: 0
 --- !u!114 &5013762535691641267
 MonoBehaviour:
@@ -463,6 +463,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 2c305d59fb8b629449ec6ca1406e1b8c, type: 2}
+        m_TargetAssemblyTypeName: SO_Level, Assembly-CSharp
+        m_MethodName: KillCountAdd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8042969264380009359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,7 +649,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.6878011, y: -0.094938576}
+  m_Offset: {x: 0.59274286, y: -0.12134361}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -648,7 +660,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5282104, y: 1.2122408}
+  m_Size: {x: 0.33809388, y: 1.1594307}
   m_EdgeRadius: 0
 --- !u!114 &4275555089935325880
 MonoBehaviour:

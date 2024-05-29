@@ -57,6 +57,8 @@ public class EnemyController : MonoBehaviour
     private Rigidbody2D _rb2d;
     public BoxCollider2D hurtBox;
 
+    public Vector2 direction;
+
     public UnityEvent onDeath;
 
     void Start()
@@ -87,8 +89,8 @@ public class EnemyController : MonoBehaviour
             if (_isMoving)
             {
                 enemyGraphics.SetBool("isWalking", true);
-                Vector2 direction = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);
-                moveAction.MoveProcess(direction.normalized);
+                //Vector2 direction = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);
+                moveAction.MoveProcess(direction);
             }
             else
             {

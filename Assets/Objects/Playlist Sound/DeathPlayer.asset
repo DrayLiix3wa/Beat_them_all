@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b464c590cbedd489a577ee955014b3, type: 3}
+  m_Name: DeathPlayer
+  m_EditorClassIdentifier: 
+  playlistName: DeathPlayer
+  sounds:
+  - name: death_1
+    clip: {fileID: 8300000, guid: 24c3be633d86ed14a99d1cd27562e702, type: 3}
+    volume: 0
+  - name: death_2
+    clip: {fileID: 8300000, guid: f8d392a7bce8849459db072dee526231, type: 3}
+    volume: 0
+  - name: death_3
+    clip: {fileID: 8300000, guid: 359cb69828bb57745bf4343413f7fe9c, type: 3}
+    volume: 0
+  - name: death_4
+    clip: {fileID: 8300000, guid: 619c840ba116131478cb9a0a3ed14daf, type: 3}
+    volume: 0
+  - name: death_5
+    clip: {fileID: 8300000, guid: bca5a50fe41f98045ad81f7c3b74578c, type: 3}
+    volume: 0
+  - name: death_6
+    clip: {fileID: 8300000, guid: 9c1d5a0e4fb873a448635271ae40cb27, type: 3}
+    volume: 0
+  - name: death_7
+    clip: {fileID: 8300000, guid: 7a9ab106641c3714c8a4508bca1934b6, type: 3}
+    volume: 0

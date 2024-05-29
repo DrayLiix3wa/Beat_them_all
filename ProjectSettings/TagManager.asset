@@ -10,17 +10,21 @@ TagManager:
   - EnnemyHit
   - Enemy
   - PoolsManager
+  - SoundManager
+  - PlayerAnchorFront
+  - PlayerAnchorBack
+  - EnemyAnchor
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Obstacle
   - Water
   - UI
   - Player
   - Dash
   - Ennemy
-  - 
+  - Anchor
   - 
   - 
   - 
