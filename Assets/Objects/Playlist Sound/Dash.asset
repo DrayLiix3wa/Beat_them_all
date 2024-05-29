@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b464c590cbedd489a577ee955014b3, type: 3}
+  m_Name: Dash
+  m_EditorClassIdentifier: 
+  playlistName: Dash
+  sounds:
+  - name: Dash_1
+    clip: {fileID: 8300000, guid: 123c41c1a3dbd1a4fb643ce94b156ffb, type: 3}
+    volume: 1
+  - name: Dash_2
+    clip: {fileID: 0}
+    volume: 1
+  - name: Dash_3
+    clip: {fileID: 8300000, guid: 95ffe4ee440a64c41b211943d3bef172, type: 3}
+    volume: 1
+  - name: Dash_4
+    clip: {fileID: 8300000, guid: 4b752accfca4544469fd7fe7a750d077, type: 3}
+    volume: 1
+  - name: Dash_5
+    clip: {fileID: 8300000, guid: f8fed827c335d67428559aabaadea4c5, type: 3}
+    volume: 1
+  - name: Dash_6
+    clip: {fileID: 8300000, guid: 2c67d7993b1912e458a9e9e223ae4c99, type: 3}
+    volume: 1
