@@ -245,6 +245,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6106752229445146655, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 1422400280}
+    - target: {fileID: 6106752229445146655, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
       propertyPath: particleDash
       value: 
       objectReference: {fileID: 1422400277}
@@ -563,6 +567,11 @@ PrefabInstance:
 --- !u!1 &1422400277 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5441241194865626047, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
+  m_PrefabInstance: {fileID: 516572735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1422400280 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8970776682969373216, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
   m_PrefabInstance: {fileID: 516572735}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1882540415 stripped
