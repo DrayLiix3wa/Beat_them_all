@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71b2b6c2f5d31da4c825cc7b1b863818, type: 3}
   m_Name: FarWest
   m_EditorClassIdentifier: 
-  levelName: 
+  levelName: Far West
   isWin: 0
   isLoose: 1
   killCount: 0
