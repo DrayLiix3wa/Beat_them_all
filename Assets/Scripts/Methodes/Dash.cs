@@ -10,7 +10,7 @@ public class Dash : MonoBehaviour
 {
     [SerializeField]
     public Rigidbody2D rb2d;
-    public TrailRenderer trailRenderer;
+    public GameObject particleDash;
     public AudioController audioController;
 
     [Header("Stats")]
@@ -33,13 +33,13 @@ public class Dash : MonoBehaviour
 
     void Start()
     {
-        trailRenderer.emitting = false;
+        particleDash.SetActive(false);
     }
 
     public void OnDashEnter()
     {
         dashChrono = 0f;
-        trailRenderer.emitting = true;
+        particleDash.SetActive(true);
         gameObject.layer = dashLayer;
         hitBox.enabled = false;
 
@@ -74,8 +74,8 @@ public class Dash : MonoBehaviour
     public void OnDashExit() 
     {
         rb2d.velocity = Vector2.zero;
-        trailRenderer.emitting = false;
-        trailRenderer.Clear();
+        particleDash.SetActive(false);
+        //trailRenderer.Clear();
         gameObject.layer = playerLayer;
         hitBox.enabled = true;
     }

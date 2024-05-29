@@ -501,7 +501,7 @@ Transform:
   m_GameObject: {fileID: 8490258665820737081}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -938,7 +938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 1666212626196770515}
-  trailRenderer: {fileID: 4543980344061864618}
+  particleDash: {fileID: 5441241194865626047}
   audioController: {fileID: 6080060414389514459}
   dashDuration: 0.1
   dashSpeed: 5
@@ -1134,6 +1134,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 116be45398224c540ae7a82c5ec9b927, type: 3}
+--- !u!1 &5441241194865626047 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1367534940631366443, guid: 116be45398224c540ae7a82c5ec9b927, type: 3}
+  m_PrefabInstance: {fileID: 6447283030770086036}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7739472298211991015 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3607797600051441011, guid: 116be45398224c540ae7a82c5ec9b927, type: 3}
