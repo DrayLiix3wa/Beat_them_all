@@ -9,4 +9,11 @@ public class SO_Level : ScriptableObject
 
     public bool isWin = false;
     public bool isLoose = true;
+
+    public int killCount = 0;
+
+    public void KillCountAdd()
+    {
+        killCount++;
+    }
 }
