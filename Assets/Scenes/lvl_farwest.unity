@@ -501,7 +501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3873195971279459469, guid: 0b0870af02c2e07428850beafa8331f7, type: 3}
       propertyPath: killsToWin
-      value: 2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3873195971279459469, guid: 0b0870af02c2e07428850beafa8331f7, type: 3}
       propertyPath: OnLevelFail.m_PersistentCalls.m_Calls.Array.size
