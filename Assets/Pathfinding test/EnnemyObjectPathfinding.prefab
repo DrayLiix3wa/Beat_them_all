@@ -211,8 +211,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5334788064622661408}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.005, y: -0.584, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.681, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -252,7 +252,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.119436115
+  m_Radius: 0.039374918
 --- !u!1 &5338257813457060759
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,7 +762,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -777,13 +777,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.31604242, y: -0.5525567}
-      - {x: 0.04170513, y: -0.49379003}
-      - {x: -0.21907759, y: -0.53616}
-      - {x: -0.31313425, y: -0.60686475}
-      - {x: -0.29268306, y: -0.74931586}
-      - {x: 0.35603726, y: -0.7600844}
-      - {x: 0.38674116, y: -0.6176331}
+    - - {x: -0.31797644, y: -0.585241}
+      - {x: -0.50621605, y: -0.68557036}
+      - {x: -0.00717932, y: -0.94052345}
+      - {x: 0.49541622, y: -0.6909353}
+      - {x: -0.02255714, y: -0.4362608}
   m_UseDelaunayMesh: 0
 --- !u!1 &8457362269021492660
 GameObject:
