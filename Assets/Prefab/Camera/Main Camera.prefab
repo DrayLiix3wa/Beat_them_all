@@ -251,4 +251,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playlists:
   - {fileID: 11400000, guid: 475a129fe9cda01408107cb4e17c19a7, type: 2}
+  - {fileID: 11400000, guid: 968364443cba91645a44ff2a602e6a32, type: 2}
   debugMode: 1
