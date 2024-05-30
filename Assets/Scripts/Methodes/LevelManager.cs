@@ -40,19 +40,24 @@ public class LevelManager : MonoBehaviour
 
     private void UpdateLevel()
     {
+        if (currentHealth == 0)
+        {
+            StateLevel.isLoose = true;
+            OnLevelFail.Invoke();
+        }
+
         switch ( currentGoal )
         {
             case LevelGoal.KILLCOUNT:
-                if (currentHealth == 0 || StateLevel.killCount >= StateLevel.killsToWin)
+                if (StateLevel.killCount >= StateLevel.killsToWin)
                 {
-                    StateLevel.isLoose = true;
-                    OnLevelFail.Invoke();
+                    StateLevel.isWin = true;
                 }
                 break;
             case LevelGoal.CHRONO:
-                if (currentHealth == 0 || chrono >= StateLevel.timeToWin)
+                if (chrono >= StateLevel.timeToWin)
                 {
-                    StateLevel.isLoose = true;
+                    StateLevel.isWin = true;
                 }
                 break;
             default:
