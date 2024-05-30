@@ -22,7 +22,6 @@ public class LevelManager : MonoBehaviour
 
     public SO_Level StateLevel;
     public SO_player StatsPlayer;
-    public float currentHealth;
 
     public UnityEvent OnLevelFail = new UnityEvent();
 
@@ -30,7 +29,7 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField]
     private bool _timerActive = false;
-
+    private float currentHealth;
 
     private void Update()
     {
@@ -41,19 +40,24 @@ public class LevelManager : MonoBehaviour
 
     private void UpdateLevel()
     {
-        switch (currentGoal)
+        if (currentHealth == 0)
+        {
+            StateLevel.isLoose = true;
+            OnLevelFail.Invoke();
+        }
+
+        switch ( currentGoal )
         {
             case LevelGoal.KILLCOUNT:
-                if (currentHealth == 0 || StateLevel.killCount >= StateLevel.killsToWin)
+                if (StateLevel.killCount >= StateLevel.killsToWin)
                 {
-                    StateLevel.isLoose = true;
-                    OnLevelFail.Invoke();
+                    StateLevel.isWin = true;
                 }
                 break;
             case LevelGoal.CHRONO:
-                if (currentHealth == 0 || chrono >= StateLevel.timeToWin)
+                if (chrono >= StateLevel.timeToWin)
                 {
-                    StateLevel.isLoose = true;
+                    StateLevel.isWin = true;
                 }
                 break;
             default:

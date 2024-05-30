@@ -13,15 +13,24 @@ public class Wave
 public class SpawnerEnemy : MonoBehaviour
 {
     public Wave[] myWaves;
-    public bool timerOnOff = false;
-    public float _timeVague;
+    public bool setTimerToWin = false;
     int waveCount = 0;
     bool isRunning = true;
-    float _chrono = 0f;
     public PoolsManager poolsManager;
+
+    public GameObject[] spawnerSpots;
+    
+    public SO_Level level;
+
+    private float _timeVague;
 
     void Start()
     {
+        if (level != null)
+        {
+            _timeVague = level.timeToWin;
+        }
+
         if (isRunning == true && waveCount < myWaves.Length)
         {
             StartCoroutine(Spawn(waveCount));
@@ -30,9 +39,7 @@ public class SpawnerEnemy : MonoBehaviour
 
     void Update()
     {
-        _chrono += Time.deltaTime;
-
-        if ( timerOnOff == false )
+        if ( setTimerToWin == false )
         {
             if ( CheckEnemieCount() == 0 )
             {
@@ -50,21 +57,27 @@ public class SpawnerEnemy : MonoBehaviour
         }
         else
         {
-            if ( _chrono >= _timeVague )
+            if (CheckEnemieCount() == 0)
             {
                 waveCount++;
-                if ( waveCount < myWaves.Length )
+                if (waveCount < myWaves.Length)
                 {
                     isRunning = true;
                     Start();
-                    _chrono = 0f;
                 }
-                else 
-                { 
-                    isRunning = false; 
-                    _chrono = 0f;
+                else
+                {
+                    isRunning = false;
                 }
+
             }
+
+            if ( waveCount == 0 && level.chrono > _timeVague )
+            {
+                waveCount = 0;
+                Start();
+            }
+ 
         }
     }
 
@@ -78,7 +91,18 @@ public class SpawnerEnemy : MonoBehaviour
         foreach (var e in myWaves[waveID]._enemies)
         {
             isRunning = true;
-            Vector2 spawnPos = (Vector2)transform.position;
+
+            Vector2 spawnPos;
+
+            if (spawnerSpots.Length > 0)
+            {
+                int randomSpot = Random.Range(0, spawnerSpots.Length);
+                 spawnPos = (Vector2)spawnerSpots[randomSpot].transform.position;
+            }else
+            {
+                 spawnPos = (Vector2)transform.position;
+            }
+
             GameObject enemie = poolsManager.GetObjectFromPool(e.poolName);
             enemie.transform.position = spawnPos;
 
@@ -88,4 +112,15 @@ public class SpawnerEnemy : MonoBehaviour
         isRunning = false;
 
     }
+
+    private void OnValidate()
+    {
+        if (level != null)
+        {
+            _timeVague = level.timeToWin;
+
+        }
+    }
+
+
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Enemy_1
   m_EditorClassIdentifier: 
   poolName: Ennemy_1
-  prefab: {fileID: 5352037557489036431, guid: 8d45cfff2edd85744b38815da48c297c, type: 3}
+  prefab: {fileID: 6661771249772376950, guid: f4bba539c9ad0e8439b30e76cbfc1441, type: 3}
   initialSize: 50
-  objectsActive: 3
-  objectsInactive: 47
+  objectsActive: 0
+  objectsInactive: 50
