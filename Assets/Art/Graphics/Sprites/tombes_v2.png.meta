@@ -1,0 +1,310 @@
+fileFormatVersion: 2
+guid: bfecede9c19292b44b70407b63f72215
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 205
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tombes_v2_0
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 421
+        width: 195
+        height: 305
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -97.5, y: -107.5}
+        - {x: -11.5, y: -152.5}
+        - {x: 96.5, y: -92.5}
+        - {x: 97.5, y: -74.5}
+        - {x: 8.5, y: -39.5}
+        - {x: -97.5, y: -81.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10095523c5bcfa4e868ad57bb673bd7
+      internalID: -1527867075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tombes_v2_1
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 399
+        width: 144
+        height: 340
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -166}
+        - {x: -67, y: -131}
+        - {x: -66, y: -118}
+        - {x: -1, y: -88}
+        - {x: 60, y: -113}
+        - {x: 71, y: -126}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2575137d367342d4f9ac05a20bd4c9c4
+      internalID: -1754682862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tombes_v2_2
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 378
+        width: 317
+        height: 382
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -90.5, y: -114}
+        - {x: -90.5, y: -98}
+        - {x: 2.5, y: -56}
+        - {x: 100.5, y: -98}
+        - {x: 100.5, y: -115}
+        - {x: -7.5, y: -170}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de108b4c4df7294fa8ba81e3f02dbdf
+      internalID: -41693535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tombes_v2_3
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 455
+        width: 177
+        height: 305
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -79.5, y: -105.5}
+        - {x: -76.5, y: -93.5}
+        - {x: 3.5, y: -61.5}
+        - {x: 88.5, y: -87.5}
+        - {x: 87.5, y: -102.5}
+        - {x: 0.5, y: -152.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b14f5b7aa4a6de4a82637af396f6eb6
+      internalID: 1392485860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tombes_v2_4
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 64
+        width: 261
+        height: 296
+      alignment: 9
+      pivot: {x: 0.33, y: 0.36}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -71.5, y: -61}
+        - {x: -106.5, y: -40}
+        - {x: -95.5, y: -30}
+        - {x: -21.5, y: 1}
+        - {x: 10.5, y: -5}
+        - {x: 17.5, y: -18}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2fc47515c83c03408f8ccaf44a0f96e
+      internalID: -266257710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tombes_v2_5
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 72
+        width: 250
+        height: 280
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -7, y: -139}
+        - {x: -116, y: -78}
+        - {x: -101, y: -66}
+        - {x: 3, y: -19}
+        - {x: 108, y: -59}
+        - {x: 109, y: -76}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d366f20ab1c2a4b88537bd40d16755
+      internalID: 56192048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tombes_v2_6
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 44
+        width: 327
+        height: 333
+      alignment: 9
+      pivot: {x: 0.73, y: 0.39}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -11.5, y: -19.5}
+        - {x: -2.5, y: -10.5}
+        - {x: 76.5, y: 13.5}
+        - {x: 150.5, y: -18.5}
+        - {x: 160.5, y: -29.5}
+        - {x: 78.5, y: -72.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437545a3fc5c7fe4591f567079fcaf40
+      internalID: 1617830053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tombes_v2_0: -1527867075
+      tombes_v2_1: -1754682862
+      tombes_v2_2: -41693535
+      tombes_v2_3: 1392485860
+      tombes_v2_4: -266257710
+      tombes_v2_5: 56192048
+      tombes_v2_6: 1617830053
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
