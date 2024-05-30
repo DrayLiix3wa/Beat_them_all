@@ -93,19 +93,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -113,33 +100,105 @@ TextureImporter:
       name: fence_S_0
       rect:
         serializedVersion: 2
-        x: 120
+        x: 222
         y: 60
-        width: 136
-        height: 108
+        width: 34
+        height: 48
+      alignment: 9
+      pivot: {x: 0.4, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -20}
+        - {x: 1, y: -10}
+        - {x: -17, y: -1}
+        - {x: -17, y: 4}
+        - {x: 17, y: -9}
+        - {x: 17, y: -20}
+        - {x: 9, y: -24}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d504e1146b73ad244bd98258fe500389
+      internalID: -300090268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_S_1
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 104
+        width: 34
+        height: 37
       alignment: 9
       pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -60, y: 6}
-        - {x: -68, y: 10}
-        - {x: -68, y: 22}
-        - {x: -60, y: 26}
-        - {x: -52, y: 22}
-        - {x: -52, y: 17}
-        - {x: 52, y: -36}
-        - {x: 60, y: -32}
-        - {x: 68, y: -36}
-        - {x: 68, y: -50}
-        - {x: 61, y: -54}
-        - {x: 52, y: -50}
-        - {x: 52, y: -41}
-        - {x: -52, y: 10}
+      - - {x: 9, y: -18.5}
+        - {x: -17, y: -5.5}
+        - {x: -17, y: -0.5}
+        - {x: 17, y: -18.5}
       tessellationDetail: 0
       bones: []
-      spriteID: 6181d1bdc0fd4b640aeac709d0cd89ec
-      internalID: 680222927
+      spriteID: 8510fa25f5cffc24d982fb91b8225002
+      internalID: 356608805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_S_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 120
+        width: 34
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -9, y: -24}
+        - {x: -17, y: -20}
+        - {x: -17, y: -4}
+        - {x: -6, y: -6}
+        - {x: 17, y: -23}
+        - {x: 17, y: -24}
+        - {x: 11, y: -24}
+        - {x: -1, y: -20}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a3637949e598b498c65cde3077130e
+      internalID: -740267778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fence_S_3
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 87
+        width: 34
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 9, y: -18.5}
+        - {x: -17, y: -5.5}
+        - {x: -17, y: -0.5}
+        - {x: 17, y: -18.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0d125c8110fb3489cf738fcfd6fcec
+      internalID: -1403663492
       vertices: []
       indices: 
       edges: []
@@ -155,7 +214,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      fence_S_0: 680222927
+      fence_S_0: -300090268
+      fence_S_1: 356608805
+      fence_S_2: -740267778
+      fence_S_3: -1403663492
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
