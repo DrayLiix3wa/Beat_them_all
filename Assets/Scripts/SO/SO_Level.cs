@@ -7,6 +7,8 @@ public class SO_Level : ScriptableObject
 {
     public string levelName;
 
+    public string sceneName;
+
     public bool isWin = false;
     public bool isLoose = true;
 
