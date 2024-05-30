@@ -1142,13 +1142,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7413811079976652000, guid: bfbc70d0cececc7478312fcec5a21787, type: 3}
+      propertyPath: level
+      value: 
+      objectReference: {fileID: 11400000, guid: 95815676d4f39ab468d69d2cc91cff0c, type: 2}
+    - target: {fileID: 7413811079976652000, guid: bfbc70d0cececc7478312fcec5a21787, type: 3}
+      propertyPath: _timeVague
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 7413811079976652000, guid: bfbc70d0cececc7478312fcec5a21787, type: 3}
       propertyPath: timerOnOff
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7413811079976652000, guid: bfbc70d0cececc7478312fcec5a21787, type: 3}
       propertyPath: poolsManager
       value: 
       objectReference: {fileID: 1921831617}
+    - target: {fileID: 7413811079976652000, guid: bfbc70d0cececc7478312fcec5a21787, type: 3}
+      propertyPath: setTimerToWin
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7413811079976652000, guid: bfbc70d0cececc7478312fcec5a21787, type: 3}
       propertyPath: myWaves.Array.size
       value: 6
@@ -1275,7 +1287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8846981898311927961, guid: bfbc70d0cececc7478312fcec5a21787, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
