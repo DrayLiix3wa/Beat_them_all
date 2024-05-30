@@ -1048,6 +1048,7 @@ MonoBehaviour:
   current: 0
   cooldown: 2
   regenRate: 0.1
+  tiredAnimation: {fileID: 1095609499334531504}
   debugMode: 0
   _chrono: 0
 --- !u!82 &6110422022097968860
@@ -1324,6 +1325,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cbb332e2a1c9c342a4ef8fac0a34aa9, type: 3}
+--- !u!1 &1095609499334531504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6088879967063268456, guid: 8cbb332e2a1c9c342a4ef8fac0a34aa9, type: 3}
+  m_PrefabInstance: {fileID: 6608028707240838616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5553697477801207961 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1632235419665853761, guid: 8cbb332e2a1c9c342a4ef8fac0a34aa9, type: 3}

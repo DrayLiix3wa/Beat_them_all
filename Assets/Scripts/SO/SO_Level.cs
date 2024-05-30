@@ -10,7 +10,12 @@ public class SO_Level : ScriptableObject
     public bool isWin = false;
     public bool isLoose = true;
 
+    public int timeToWin = 180;
+    public int killsToWin = 30;
+
+    [Header("Stats")]
     public int killCount = 0;
+    public int chrono = 0;
 
     public void KillCountAdd()
     {
@@ -22,5 +27,6 @@ public class SO_Level : ScriptableObject
         killCount = 0;
         isWin = false;
         isLoose = true;
+        chrono = 0;
     }
 }
