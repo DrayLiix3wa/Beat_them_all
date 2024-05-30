@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Horror Level Door
   m_EditorClassIdentifier: 
   isOpen: 0
-  level: {fileID: 0}
+  level: {fileID: 11400000, guid: 95815676d4f39ab468d69d2cc91cff0c, type: 2}
