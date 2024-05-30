@@ -75,6 +75,7 @@ public class EnemyController : MonoBehaviour
 
     private void OnEnable()
     {
+
         if (currentState == EnemyState.DEATH)
         {
             _isDead = false;

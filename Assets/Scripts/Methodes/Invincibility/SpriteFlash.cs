@@ -5,6 +5,13 @@ using UnityEngine;
 public class SpriteFlash : MonoBehaviour
 {
     public SpriteRenderer _spriteRenderer;
+    private Color startColor;
+
+    public void Start()
+    {
+        startColor = _spriteRenderer.color;
+    }
+
     public void StartSpriteFlash(float flashDuration, Color flashColor, int numberOfFlashes)
     {
         StartCoroutine(FlashCoroutine(flashDuration, flashColor, numberOfFlashes));
@@ -12,7 +19,7 @@ public class SpriteFlash : MonoBehaviour
 
     public IEnumerator FlashCoroutine(float flashDuration, Color flashColor, int numberOfFlashes)
     {
-        Color startColor = _spriteRenderer.color;
+        //Color startColor = _spriteRenderer.color;
         float elapsedFlashTime = 0;
         float elapsedFlashPercentage = 0;
 
@@ -31,5 +38,8 @@ public class SpriteFlash : MonoBehaviour
 
             yield return null;
         }
+
+        Debug.Log("startColor");
+        _spriteRenderer.color = startColor;
     }
 }
