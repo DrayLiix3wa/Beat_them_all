@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Horror
   m_EditorClassIdentifier: 
   levelName: Horror
+  sceneName: lvl_horror
   isWin: 0
   isLoose: 1
   timeToWin: 120
