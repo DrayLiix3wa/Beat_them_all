@@ -75,7 +75,8 @@ public class EnemyController : MonoBehaviour
 
     private void OnEnable()
     {
-
+        GetComponent<AudioSource>().Stop();
+            
         if (currentState == EnemyState.DEATH)
         {
             _isDead = false;
