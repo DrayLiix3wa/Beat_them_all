@@ -97,7 +97,7 @@ Transform:
   m_GameObject: {fileID: 2556799860638286079}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -277,7 +277,7 @@ Transform:
   m_GameObject: {fileID: 3623685385491560448}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -367,7 +367,7 @@ Transform:
   m_GameObject: {fileID: 5481693490274784097}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.681, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -433,7 +433,7 @@ Transform:
   m_GameObject: {fileID: 6243843086692735726}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.49, y: -0.132, z: 0}
+  m_LocalPosition: {x: 0.49, y: 0.431, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -466,7 +466,7 @@ Transform:
   m_GameObject: {fileID: 6314203543921802427}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -555,7 +555,7 @@ Transform:
   m_GameObject: {fileID: 6541090323366277474}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.462, y: -0.118, z: 0}
+  m_LocalPosition: {x: -0.462, y: 0.431, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1048,6 +1048,7 @@ MonoBehaviour:
   current: 0
   cooldown: 2
   regenRate: 0.1
+  tiredTreshold: 0.3
   tiredAnimation: {fileID: 1095609499334531504}
   debugMode: 0
   _chrono: 0
@@ -1191,11 +1192,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.31797644, y: -0.585241}
-      - {x: -0.50621605, y: -0.68557036}
-      - {x: -0.00717932, y: -0.94052345}
-      - {x: 0.49541622, y: -0.6909353}
-      - {x: -0.02255714, y: -0.4362608}
+    - - {x: -0.31797644, y: 0.09349567}
+      - {x: -0.4697733, y: 0.0022763014}
+      - {x: 0.024707735, y: -0.2526763}
+      - {x: 0.5181928, y: 0.015133202}
+      - {x: -0.013445735, y: 0.2652525}
   m_UseDelaunayMesh: 0
 --- !u!1001 &6447283030770086036
 PrefabInstance:
@@ -1211,11 +1212,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3607797600051441011, guid: 116be45398224c540ae7a82c5ec9b927, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.16666667
+      value: -0.14
       objectReference: {fileID: 0}
     - target: {fileID: 3607797600051441011, guid: 116be45398224c540ae7a82c5ec9b927, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.083333336
+      value: 0.183
       objectReference: {fileID: 0}
     - target: {fileID: 3607797600051441011, guid: 116be45398224c540ae7a82c5ec9b927, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1274,11 +1275,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1632235419665853761, guid: 8cbb332e2a1c9c342a4ef8fac0a34aa9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.012
       objectReference: {fileID: 0}
     - target: {fileID: 1632235419665853761, guid: 8cbb332e2a1c9c342a4ef8fac0a34aa9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.083333336
+      value: 0.327
       objectReference: {fileID: 0}
     - target: {fileID: 1632235419665853761, guid: 8cbb332e2a1c9c342a4ef8fac0a34aa9, type: 3}
       propertyPath: m_LocalPosition.z
