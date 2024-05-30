@@ -1,0 +1,733 @@
+fileFormatVersion: 2
+guid: 89716fb051f04a34298c5515f31bdcfc
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tower-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 288
+        width: 32
+        height: 68
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -34}
+        - {x: -16, y: -25}
+        - {x: -16, y: -21}
+        - {x: 0, y: -15}
+        - {x: 16, y: -21}
+        - {x: 16, y: -26}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8e2b48058df374db04f4a3b8820d15
+      internalID: 222374869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 288
+        width: 32
+        height: 70
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -34}
+        - {x: -16, y: -25}
+        - {x: -16, y: -21}
+        - {x: 0, y: -15}
+        - {x: 16, y: -21}
+        - {x: 16, y: -26}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66288554064f24447baea8ac5ab66422
+      internalID: 299426152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 288
+        width: 32
+        height: 78
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -39}
+        - {x: -16, y: -30}
+        - {x: -16, y: -26}
+        - {x: 0, y: -20}
+        - {x: 16, y: -26}
+        - {x: 16, y: -31}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63bc056b00004c42a8970a21f47a603
+      internalID: 1102393423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 288
+        width: 32
+        height: 77
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -38.5}
+        - {x: -16, y: -29.5}
+        - {x: -16, y: -25.5}
+        - {x: 0, y: -19.5}
+        - {x: 16, y: -25.5}
+        - {x: 16, y: -30.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb377bbb6c9a674e8392d9e764f7687
+      internalID: -1260204504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 288
+        width: 32
+        height: 81
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -40.5}
+        - {x: -16, y: -31.5}
+        - {x: -16, y: -27.5}
+        - {x: 0, y: -21.5}
+        - {x: 16, y: -27.5}
+        - {x: 16, y: -32.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5bc529e4366cf40a38bf200f68472f
+      internalID: 1804924905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 288
+        width: 32
+        height: 81
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -40.5}
+        - {x: -16, y: -31.5}
+        - {x: -16, y: -27.5}
+        - {x: 0, y: -21.5}
+        - {x: 16, y: -27.5}
+        - {x: 16, y: -32.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46435f065f6253c43954f05648804a9d
+      internalID: 1954799586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 192
+        width: 32
+        height: 81
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -40.5}
+        - {x: -16, y: -31.5}
+        - {x: -16, y: -27.5}
+        - {x: 0, y: -21.5}
+        - {x: 16, y: -27.5}
+        - {x: 16, y: -32.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8836c621b89f8a141a60c132e3dc4e45
+      internalID: -148463408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 192
+        width: 32
+        height: 80
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -40}
+        - {x: -16, y: -31}
+        - {x: -16, y: -27}
+        - {x: 0, y: -21}
+        - {x: 16, y: -27}
+        - {x: 16, y: -32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3e6cf1ede6ba64daa973442f5de30a
+      internalID: -1769014590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 32
+        height: 79
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -39.5}
+        - {x: -16, y: -30.5}
+        - {x: -16, y: -26.5}
+        - {x: 0, y: -20.5}
+        - {x: 16, y: -26.5}
+        - {x: 16, y: -31.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf4d4c8e18488a41a477d8b85b6e1f5
+      internalID: -2048262368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 192
+        width: 32
+        height: 79
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -39.5}
+        - {x: -16, y: -30.5}
+        - {x: -16, y: -26.5}
+        - {x: 0, y: -20.5}
+        - {x: 16, y: -26.5}
+        - {x: 16, y: -31.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e4a67239baa3584884ccab2ebc82d6c
+      internalID: -699999117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 192
+        width: 32
+        height: 79
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -39.5}
+        - {x: -16, y: -30.5}
+        - {x: -16, y: -26.5}
+        - {x: 0, y: -20.5}
+        - {x: 16, y: -26.5}
+        - {x: 16, y: -31.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662e6cdb4c1fba54b90390577ed1493d
+      internalID: -695246014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 192
+        width: 32
+        height: 79
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -39.5}
+        - {x: -16, y: -30.5}
+        - {x: -16, y: -26.5}
+        - {x: 0, y: -20.5}
+        - {x: 16, y: -26.5}
+        - {x: 16, y: -31.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d3296d07eb5b924c9f1102475d17eba
+      internalID: -1921284231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 192
+        width: 33
+        height: 80
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0.5, y: -40}
+        - {x: -16.5, y: -31}
+        - {x: -16.5, y: -27}
+        - {x: -0.5, y: -21}
+        - {x: 15.5, y: -27}
+        - {x: 15.5, y: -32}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b39b0f49c307649b038c49bac1b5f8
+      internalID: 1714297327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 192
+        width: 32
+        height: 81
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -40.5}
+        - {x: -16, y: -31.5}
+        - {x: -16, y: -27.5}
+        - {x: 0, y: -21.5}
+        - {x: 16, y: -27.5}
+        - {x: 16, y: -32.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ef3647cc3d3d24db07ef80f1f8d110
+      internalID: 1901415087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 32
+        height: 85
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -42.5}
+        - {x: -16, y: -33.5}
+        - {x: -16, y: -29.5}
+        - {x: 0, y: -23.5}
+        - {x: 16, y: -29.5}
+        - {x: 16, y: -34.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2692bfd3fab51fa43ad6b205f1686f98
+      internalID: 1769517525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 97
+        width: 32
+        height: 88
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -44}
+        - {x: -16, y: -35}
+        - {x: -16, y: -31}
+        - {x: 0, y: -25}
+        - {x: 16, y: -31}
+        - {x: 16, y: -36}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f289c23516a224db9641ea88a4165b
+      internalID: 1164751779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 96
+        width: 32
+        height: 88
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -44}
+        - {x: -16, y: -35}
+        - {x: -16, y: -31}
+        - {x: 0, y: -25}
+        - {x: 16, y: -31}
+        - {x: 16, y: -36}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f257619feefa0648a2887bc1b272e3a
+      internalID: 804324032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 96
+        width: 32
+        height: 88
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -44}
+        - {x: -16, y: -35}
+        - {x: -16, y: -31}
+        - {x: 0, y: -25}
+        - {x: 16, y: -31}
+        - {x: 16, y: -36}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ec52400433a4a4d9e07008b66401ae
+      internalID: 405852164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 96
+        width: 36
+        height: 91
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -45.5}
+        - {x: -16, y: -36.5}
+        - {x: -16, y: -32.5}
+        - {x: 0, y: -26.5}
+        - {x: 16, y: -32.5}
+        - {x: 16, y: -37.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a217f0936d40940a8d769009b2d206
+      internalID: 504912181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 32
+        height: 82
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -41}
+        - {x: -16, y: -32}
+        - {x: -16, y: -28}
+        - {x: 0, y: -22}
+        - {x: 16, y: -28}
+        - {x: 16, y: -33}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04189c743e420554a8b9676ed4511414
+      internalID: -1274608860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 96
+        width: 42
+        height: 95
+      alignment: 9
+      pivot: {x: 0.51, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -47.5}
+        - {x: -17, y: -38.5}
+        - {x: -17, y: -34.5}
+        - {x: -1, y: -28.5}
+        - {x: 15, y: -34.5}
+        - {x: 15, y: -39.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489695b62223f6649bc662c0ca329d2d
+      internalID: -842796841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tower-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 1, y: -11.5}
+        - {x: -16, y: -2.5}
+        - {x: -16, y: 0.5}
+        - {x: 0, y: 7.5}
+        - {x: 16, y: 0.5}
+        - {x: 16, y: -3.5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa13b8a999e87d346ac464567f76267c
+      internalID: 1568721522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Tower-Sheet_0: 222374869
+      Tower-Sheet_1: 299426152
+      Tower-Sheet_10: -695246014
+      Tower-Sheet_11: -1921284231
+      Tower-Sheet_12: 1714297327
+      Tower-Sheet_13: 1901415087
+      Tower-Sheet_14: 1769517525
+      Tower-Sheet_15: 1164751779
+      Tower-Sheet_16: 804324032
+      Tower-Sheet_17: 405852164
+      Tower-Sheet_18: -30727246
+      Tower-Sheet_19: -841186942
+      Tower-Sheet_2: 1102393423
+      Tower-Sheet_20: 504912181
+      Tower-Sheet_21: -595739561
+      Tower-Sheet_22: -1274608860
+      Tower-Sheet_23: -842796841
+      Tower-Sheet_24: 1568721522
+      Tower-Sheet_3: -1260204504
+      Tower-Sheet_4: 1804924905
+      Tower-Sheet_5: 1954799586
+      Tower-Sheet_6: -148463408
+      Tower-Sheet_7: -1769014590
+      Tower-Sheet_8: -2048262368
+      Tower-Sheet_9: -699999117
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
