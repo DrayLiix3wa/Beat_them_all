@@ -17,9 +17,6 @@ MonoBehaviour:
   - name: Dash_1
     clip: {fileID: 8300000, guid: 123c41c1a3dbd1a4fb643ce94b156ffb, type: 3}
     volume: 1
-  - name: Dash_2
-    clip: {fileID: 0}
-    volume: 1
   - name: Dash_3
     clip: {fileID: 8300000, guid: 95ffe4ee440a64c41b211943d3bef172, type: 3}
     volume: 1
