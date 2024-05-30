@@ -39,7 +39,7 @@ public class PlayerHitBoxManager : MonoBehaviour
             return;
         }
 
-        Debug.Log("Got Hit !");
+        //Debug.Log("Got Hit !");
         
         if (damageTags.Contains(collision.tag))
         {

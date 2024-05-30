@@ -6,13 +6,13 @@ using UnityEngine.InputSystem;
 
 
 [AddComponentMenu("Dirk Dynamite/PlayerController")]
-public class PlayerController : MonoBehaviour
+public class PlayerControllerSave : MonoBehaviour
 {
     
     //States
     public enum PlayerState
     {
-        IDLE, WALK, ATTACK, BIG_ATTACK, HURT, DEATH, DASH, BLOCK, STAMINALESS,
+        IDLE, WALK, ATTACK, BIG_ATTACK, HURT, DEATH, DASH, BLOCK
     }
 
     public PlayerState currentState;
@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour
     private bool _isBlocking;
     private bool _isDead;
     private bool _isInteracting;
-    private bool _isStaminaless;
 
     private Vector2 _inputDirection;
 
@@ -177,10 +176,6 @@ public class PlayerController : MonoBehaviour
                 playerGraphics.SetBool("isBigAttacking", true);
                 moveAction.MoveProcess(Vector2.zero);
                 break;
-            case PlayerState.STAMINALESS:
-                playerGraphics.SetTrigger("isStaminaless");
-                _isStaminaless = false;
-                break;
             default:
                 break;
         }
@@ -216,10 +211,6 @@ public class PlayerController : MonoBehaviour
                 {
                     TransitionToState(PlayerState.WALK);
                 }
-                else if (_isStaminaless)
-                {
-                    TransitionToState(PlayerState.STAMINALESS);
-                }
                 break;
             case PlayerState.WALK:
                 if (_isHurting)
@@ -237,10 +228,6 @@ public class PlayerController : MonoBehaviour
                 else if (_isBigAttacking)
                 {
                     TransitionToState(PlayerState.BIG_ATTACK);
-                }
-                else if (_isStaminaless)
-                {
-                    TransitionToState(PlayerState.STAMINALESS);
                 }
                 else if (_isBlocking)
                 {
@@ -394,10 +381,6 @@ public class PlayerController : MonoBehaviour
                 {
                     TransitionToState(PlayerState.ATTACK);
                 }
-                else if (_isStaminaless)
-                {
-                    TransitionToState(PlayerState.STAMINALESS);
-                }
                 else if (!_isBlocking && _isMoving)
                 {
                     TransitionToState(PlayerState.WALK);
@@ -407,37 +390,7 @@ public class PlayerController : MonoBehaviour
                     TransitionToState(PlayerState.IDLE);
                 }
                 break;
-            case PlayerState.STAMINALESS:
-                if (_isHurting)
-                {
-                    TransitionToState(PlayerState.HURT);
-                }
-                else if (_isDashing)
-                {
-                    TransitionToState(PlayerState.DASH);
-                }
-                else if (_isAttacking)
-                {
-                    TransitionToState(PlayerState.ATTACK);
-                }
-                else if (_isBigAttacking)
-                {
-                    TransitionToState(PlayerState.BIG_ATTACK);
-                }
-                else if (_isMoving)
-                {
-                    TransitionToState(PlayerState.WALK);
-                }
-                else if (_isBlocking)
-                {
-                    TransitionToState(PlayerState.BLOCK);
-                }
-                else if (!_isMoving)
-                {
-                    TransitionToState(PlayerState.IDLE);
-                }
-                break;
-                break;
+
             default:
                 break;
         }
@@ -478,8 +431,6 @@ public class PlayerController : MonoBehaviour
                 _isBigAttacking = false;
                 playerGraphics.SetBool("isBigAttacking", false);
                 _moveBuffer = true;
-                break;
-            case PlayerState.STAMINALESS:
                 break;
             default:
                 break;
@@ -527,7 +478,6 @@ public class PlayerController : MonoBehaviour
                 else
                 {
                     onStaminaNotEnough.Invoke();
-                    _isStaminaless = true;
                 }
                 break;
             case InputActionPhase.Canceled:
@@ -553,7 +503,6 @@ public class PlayerController : MonoBehaviour
                 else
                 {
                     onStaminaNotEnough.Invoke();
-                    _isStaminaless = true;
                 }
                 break;
             case InputActionPhase.Canceled:
@@ -578,7 +527,6 @@ public class PlayerController : MonoBehaviour
                 else
                 {
                     onStaminaNotEnough.Invoke();
-                    _isStaminaless = true;
                 }
                 break;
             case InputActionPhase.Canceled:

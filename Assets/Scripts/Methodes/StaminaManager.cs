@@ -21,6 +21,15 @@ public class StaminaManager : MonoBehaviour
     [Tooltip("Taux de régénération de l'endurance (par seconde)")]
     [Range(0f, 20f)]
     public float regenRate = 0.1f;
+    [Tooltip("Palier du statut fatigue")]
+    [Range(0f, 1f)]
+    public float tiredTreshold = 0.3f;
+
+    [Space(10)]
+
+    [Header("Tired object")]
+    [Tooltip("GameObject à activer")]
+    public GameObject tiredAnimation;
 
     [Space(10)]
 
@@ -62,6 +71,16 @@ public class StaminaManager : MonoBehaviour
                 LogDebug( "Temps de recharge écoulé - lancement de la régénération de la stamina" );
                 StartRegen();
                 _chrono = 0f;
+            }
+
+        
+            if (current <= tiredTreshold * max)
+            {
+                tiredAnimation.SetActive(true);
+            }
+            else
+            {
+                tiredAnimation.SetActive(false);
             }
         }
     }
