@@ -17,6 +17,8 @@ public class SpawnerEnemy : MonoBehaviour
     int waveCount = 0;
     bool isRunning = true;
     public PoolsManager poolsManager;
+
+    public GameObject[] spawnerSpots;
     
     public SO_Level level;
 
@@ -70,7 +72,7 @@ public class SpawnerEnemy : MonoBehaviour
 
             }
 
-            if (waveCount == 0 && level.chrono < _timeVague)
+            if ( waveCount == 0 && level.chrono > _timeVague )
             {
                 waveCount = 0;
                 Start();
@@ -89,7 +91,18 @@ public class SpawnerEnemy : MonoBehaviour
         foreach (var e in myWaves[waveID]._enemies)
         {
             isRunning = true;
-            Vector2 spawnPos = (Vector2)transform.position;
+
+            Vector2 spawnPos;
+
+            if (spawnerSpots.Length > 0)
+            {
+                int randomSpot = Random.Range(0, spawnerSpots.Length);
+                 spawnPos = (Vector2)spawnerSpots[randomSpot].transform.position;
+            }else
+            {
+                 spawnPos = (Vector2)transform.position;
+            }
+
             GameObject enemie = poolsManager.GetObjectFromPool(e.poolName);
             enemie.transform.position = spawnPos;
 
