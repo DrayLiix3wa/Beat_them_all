@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8b51d455793b098439c6719fe8a92a9b
+guid: f21dd6f1fdfc1fd44a740f231425efe3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,7 +71,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -110,36 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fence_E_0
+      name: whiskey_sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 60
-        width: 136
-        height: 108
+        y: 733
+        width: 512
+        height: 733
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -60, y: -54}
-        - {x: -68, y: -50}
-        - {x: -68, y: -39}
-        - {x: -60, y: -35}
-        - {x: -52, y: -36}
-        - {x: 52, y: 16}
-        - {x: 52, y: 26}
-        - {x: 60, y: 30}
-        - {x: 68, y: 26}
-        - {x: 68, y: 10}
-        - {x: 60, y: 6}
-        - {x: 52, y: 10}
-        - {x: -52, y: -41}
-        - {x: -52, y: -50}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb46ba5b1402d714e814591051795067
-      internalID: -2033669468
+      spriteID: d849a23329d15724ba343d883a28eb47
+      internalID: 64116583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiskey_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 733
+        width: 512
+        height: 733
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f67a54a4e848f4e992277dc14b3e09
+      internalID: -1874664484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiskey_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 733
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648ce9ee832a16742bcd9d8fbc9c00d5
+      internalID: -1605647145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiskey_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 733
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac2a03ed9cd1ca4aa3ac987abbffefe
+      internalID: 1457694120
       vertices: []
       indices: 
       edges: []
@@ -155,7 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      fence_E_0: -2033669468
+      whiskey_sheet_0: 64116583
+      whiskey_sheet_1: -1874664484
+      whiskey_sheet_2: -1605647145
+      whiskey_sheet_3: 1457694120
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
