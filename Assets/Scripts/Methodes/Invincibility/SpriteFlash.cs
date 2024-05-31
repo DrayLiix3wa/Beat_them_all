@@ -39,7 +39,6 @@ public class SpriteFlash : MonoBehaviour
             yield return null;
         }
 
-        Debug.Log("startColor");
         _spriteRenderer.color = startColor;
     }
 }
