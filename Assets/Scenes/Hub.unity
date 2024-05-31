@@ -311,7 +311,7 @@ PrefabInstance:
     - target: {fileID: 5161123821755321674, guid: 6e93b6fa7c0fa55418816a2dd47464db, type: 3}
       propertyPath: playlist
       value: 
-      objectReference: {fileID: 11400000, guid: 84c2fb5a8eb148b448f64e9e402ab7f9, type: 2}
+      objectReference: {fileID: 11400000, guid: 77953967108ba2e4d87cc32ee3c58cfc, type: 2}
     - target: {fileID: 5161123821755321674, guid: 6e93b6fa7c0fa55418816a2dd47464db, type: 3}
       propertyPath: debugMode
       value: 0
