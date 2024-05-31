@@ -679,7 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b60fddfdc29b4b4bb9dcae964205d82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
   rb: {fileID: 5533027865774779959}
   debugMode: 0
   _direction: {x: 0, y: 0}
@@ -771,7 +771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc797c6c1aef43648ae77368e01d1353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chanceOfCollectableDrop: 1
+  _chanceOfCollectableDrop: 0.3
 --- !u!82 &3477606470532398193
 AudioSource:
   m_ObjectHideFlags: 0
