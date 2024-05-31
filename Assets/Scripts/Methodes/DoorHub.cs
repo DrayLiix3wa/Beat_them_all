@@ -48,16 +48,23 @@ public class DoorHub : MonoBehaviour
 
         if (collision.CompareTag(playerTag))
         {
-            infoBox.SetActive(true);
 
             if (door.isOpen)
             {
+                infoBox.SetActive(true);
+            }
+            else
+            {
+                infoBox.SetActive(false);
             }
         }
 
         if (collision.CompareTag(playerCollectTag))
         {
-            _gameManager.LoadScene(door.level.sceneName);
+            if (door.isOpen)
+            {
+                _gameManager.LoadScene(door.level.sceneName);
+            }
         }
     }
 
