@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: Horror
   m_EditorClassIdentifier: 
   levelName: Horror
+  levelTitle: Nuit de Terreur
+  levelDescription: "Bienvenue sur le plateau de tournage Horror, Dirk ! Aujourd'hui,
+    tu es le capitaine courageux de l'\xE9quipe du lyc\xE9e. Ta mission : survivre
+    \xE0 une horde de zombies affam\xE9s dans un sinistre cimeti\xE8re. Attrape ta
+    batte de baseball, rassemble ton courage, et pr\xE9pare-toi \xE0 affronter l'horreur.
+    Bonne chance, h\xE9ros !"
+  levelPortrait: {fileID: -1476189658, guid: 6f244f57324bd4fadb25d5faa70d9de6, type: 3}
   sceneName: lvl_horror
   isWin: 0
   isLoose: 1
