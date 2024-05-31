@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        CheckWin();
 
         if (isHub && isGameStarted)
         {
@@ -65,6 +66,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        CheckWin();
         OnStateUpdate();
     }
     #endregion
