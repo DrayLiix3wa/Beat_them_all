@@ -26,11 +26,11 @@ public class DoorHub : MonoBehaviour
     {
         if(door.isOpen)
         {
-            lightCheck.color = Color.green;
+            lightCheck.color = Color.red;
         }
         else
         {
-            lightCheck.color= Color.red;
+            lightCheck.color= Color.green;
         }
     }
 
