@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b60fddfdc29b4b4bb9dcae964205d82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3.5
   rb: {fileID: 3452129205965066890}
   debugMode: 0
   _direction: {x: 0, y: 0}
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc797c6c1aef43648ae77368e01d1353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chanceOfCollectableDrop: 1
+  _chanceOfCollectableDrop: 0.3
 --- !u!82 &2174659160239356117
 AudioSource:
   m_ObjectHideFlags: 0
@@ -642,7 +642,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &3180159852831905959
 Animator:
   serializedVersion: 5
