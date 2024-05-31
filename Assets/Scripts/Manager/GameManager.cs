@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+
         TransitionToState(GameState.START);
 
         if(StateLevel == null && hub_level)

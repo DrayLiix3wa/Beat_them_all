@@ -490,9 +490,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: a0938edfb64fcea44b3e57b7415698c6, type: 2}
     - target: {fileID: 2845622379660770352, guid: e5b85da8242ba94439275e8ebe340693, type: 3}
+      propertyPath: IsHubLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2845622379660770352, guid: e5b85da8242ba94439275e8ebe340693, type: 3}
       propertyPath: StateLevel
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2845622379660770352, guid: e5b85da8242ba94439275e8ebe340693, type: 3}
+      propertyPath: levels.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2845622379660770352, guid: e5b85da8242ba94439275e8ebe340693, type: 3}
+      propertyPath: levels.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 95815676d4f39ab468d69d2cc91cff0c, type: 2}
+    - target: {fileID: 2845622379660770352, guid: e5b85da8242ba94439275e8ebe340693, type: 3}
+      propertyPath: levels.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 665f227abbf85aa459a285ec5ceebefa, type: 2}
     - target: {fileID: 2845622379660770352, guid: e5b85da8242ba94439275e8ebe340693, type: 3}
       propertyPath: onEnd.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -1459,3 +1475,7 @@ SceneRoots:
   - {fileID: 1930979273}
   - {fileID: 2014811176}
   - {fileID: 464165600}
+  - {fileID: 1258288817}
+  - {fileID: 1099279331}
+  - {fileID: 844171973490571386}
+  - {fileID: 1153114233}

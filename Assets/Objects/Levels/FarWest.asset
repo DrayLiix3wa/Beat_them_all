@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: FarWest
   m_EditorClassIdentifier: 
   levelName: FarWest
+  levelTitle: Aventures au Far West
+  levelDescription: "Bienvenue sur le plateau de tournage Western, Dirk ! Aujourd'hui,
+    tu incarnes le sh\xE9rif intr\xE9pide de cette petite ville poussi\xE9reuse.
+    Ta mission : \xE9liminer tous les bandits qui s\xE8ment la terreur. Enfile ton
+    \xE9toile de sh\xE9rif, charge ton six-coups, et montre-leur qui fait la loi
+    ici. Bonne chance, cow-boy !"
+  levelPortrait: {fileID: 1538979966, guid: f9d1437fb7f4a5f46b1129921303178f, type: 3}
   sceneName: lvl_farwest
   isWin: 0
   isLoose: 1
