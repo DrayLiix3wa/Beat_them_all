@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1861e4dda966449b7c9feaad9f8b64, type: 3}
+  m_Name: Horreur Enemy
+  m_EditorClassIdentifier: 
+  poolName: HorreurEnemy
+  prefab: {fileID: 9044241618207105416, guid: 5c1348027bdb5794ca508f2c7aa4c692, type: 3}
+  initialSize: 30
+  objectsActive: 0
+  objectsInactive: 0

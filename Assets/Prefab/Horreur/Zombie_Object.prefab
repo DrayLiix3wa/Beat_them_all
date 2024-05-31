@@ -152,7 +152,7 @@ MonoBehaviour:
   audioSource: {fileID: 3477606470532398193}
   hitClip: {fileID: 8300000, guid: 5d83a221984df9f45b12ef7ad09856af, type: 3}
   bigHitClip: {fileID: 0}
-  hurtClip: {fileID: 8300000, guid: d00625a823b5c0d4a91f6e8321d02228, type: 3}
+  hurtClip: {fileID: 8300000, guid: 2cbc86d576933fa488553af5274dc91d, type: 3}
   deathClip: {fileID: 8300000, guid: 916e90d7ae2c2d14899cecf25669e0db, type: 3}
   blockClip: {fileID: 0}
   dashClip: {fileID: 0}
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  pool: {fileID: 11400000, guid: 8615cf67e2292f6489dd3751d3dcf928, type: 2}
+  pool: {fileID: 11400000, guid: 7b24c19f17093304fa7dc7bc4706d45c, type: 2}
   enemyGraphics: {fileID: 7542019483042212375}
   moveAction: {fileID: 1386800927587502946}
   healthManager: {fileID: 1286542401696191781}
