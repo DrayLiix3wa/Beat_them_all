@@ -284,8 +284,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 586246393}
     m_Modifications:
     - target: {fileID: 1394715418255101245, guid: 3e1e59d3be177694e910bfb650d34fd0, type: 3}
+<<<<<<< HEAD
       propertyPath: m_ChunkCullingBounds.y
       value: 2.08
+=======
+      propertyPath: m_SortingOrder
+      value: -1
+>>>>>>> bd218c2bebf4096dee0c07e82e3645d59ee1567d
       objectReference: {fileID: 0}
     - target: {fileID: 1467283275865991506, guid: 3e1e59d3be177694e910bfb650d34fd0, type: 3}
       propertyPath: m_Name
@@ -332,6 +337,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2103670639450626463, guid: 3e1e59d3be177694e910bfb650d34fd0, type: 3}
+<<<<<<< HEAD
       propertyPath: m_ChunkCullingBounds.x
       value: 2.0760002
       objectReference: {fileID: 0}
@@ -342,6 +348,10 @@ PrefabInstance:
     - target: {fileID: 3412543066706169257, guid: 3e1e59d3be177694e910bfb650d34fd0, type: 3}
       propertyPath: m_ChunkCullingBounds.y
       value: 2.08
+=======
+      propertyPath: m_SortingOrder
+      value: 0
+>>>>>>> bd218c2bebf4096dee0c07e82e3645d59ee1567d
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -537,6 +547,38 @@ PrefabInstance:
     - target: {fileID: 297603691294414908, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: curve.m_Curve.Array.data[1].time
+      value: 0.36101264
+      objectReference: {fileID: 0}
+    - target: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: curve.m_Curve.Array.data[2].time
+      value: 0.7515561
+      objectReference: {fileID: 0}
+    - target: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: curve.m_Curve.Array.data[1].value
+      value: 0.2024154
+      objectReference: {fileID: 0}
+    - target: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: curve.m_Curve.Array.data[2].value
+      value: 0.43026698
+      objectReference: {fileID: 0}
+    - target: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: curve.m_Curve.Array.data[0].inSlope
+      value: 0.56068784
+      objectReference: {fileID: 0}
+    - target: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: curve.m_Curve.Array.data[3].inSlope
+      value: -1.7318476
+      objectReference: {fileID: 0}
+    - target: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: curve.m_Curve.Array.data[0].outSlope
+      value: 0.56068784
+      objectReference: {fileID: 0}
+    - target: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: curve.m_Curve.Array.data[3].outSlope
+      value: -1.7318476
       objectReference: {fileID: 0}
     - target: {fileID: 4293857736439451235, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
       propertyPath: m_Name
@@ -1274,6 +1316,18 @@ PrefabInstance:
     - target: {fileID: 399751819431924364, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
       propertyPath: onDamaged.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_FloatArgument
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243481462655412115, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
+      propertyPath: _flashColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243481462655412115, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
+      propertyPath: _flashColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243481462655412115, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
+      propertyPath: _flashColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4025436369105142048, guid: c8294bce8ccfdc94fb1753f2155952ec, type: 3}
       propertyPath: onStaminaNotEnough.m_PersistentCalls.m_Calls.Array.data[0].m_Target
