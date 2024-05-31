@@ -36,12 +36,18 @@ public class GameManager : MonoBehaviour
     public UnityEvent onWin = new UnityEvent();
 
     public SO_Level StateLevel;
+    public SO_Level hub_level;
 
     #region Unity Lifecycle
 
     private void Awake()
     {
         TransitionToState(GameState.START);
+
+        if(StateLevel == null && hub_level)
+        {
+            StateLevel = hub_level;
+        }
     }
 
     private void Update()
@@ -213,9 +219,20 @@ public class GameManager : MonoBehaviour
         isEnd = true;
     }
     
+    public void GoToHub()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(hub_level.sceneName);
+    }
+
     public void RestartGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
+
+    // fonction pour charger une scene
+    public void LoadScene(string sceneName)
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 
     public void Pause(InputAction.CallbackContext context)

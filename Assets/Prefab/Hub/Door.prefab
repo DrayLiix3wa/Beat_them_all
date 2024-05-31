@@ -85,7 +85,9 @@ MonoBehaviour:
   door: {fileID: 11400000, guid: f9683ae804f71e64d861b3002deb536e, type: 2}
   lightCheck: {fileID: 3314258776012061272}
   playerTag: Player
+  playerCollectTag: PlayerCollect
   infoBox: {fileID: 6413752751116237723}
+  _gameManager: {fileID: 0}
 --- !u!1 &6413752751116237723
 GameObject:
   m_ObjectHideFlags: 0

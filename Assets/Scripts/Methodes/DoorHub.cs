@@ -8,7 +8,19 @@ public class DoorHub : MonoBehaviour
     public SpriteRenderer lightCheck;
 
     public string playerTag;
+    public string playerCollectTag;
     public GameObject infoBox;
+
+    [SerializeField]
+    private GameManager _gameManager;
+
+    private void Awake()
+    {
+        if (_gameManager == null)
+        {
+            _gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        }
+    }
 
     private void Update()
     {
@@ -32,14 +44,20 @@ public class DoorHub : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Collision with " + collision.name);
+
         if (collision.CompareTag(playerTag))
         {
             infoBox.SetActive(true);
 
             if (door.isOpen)
             {
-                //changement de scene
             }
+        }
+
+        if (collision.CompareTag(playerCollectTag))
+        {
+            _gameManager.LoadScene(door.level.sceneName);
         }
     }
 

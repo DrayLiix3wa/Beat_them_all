@@ -133,6 +133,67 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4777727796700228679, guid: ee3ae28f03607bb498972eba53cf9b45, type: 3}
   m_PrefabInstance: {fileID: 8445073258787145333}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &129521373
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5161123821755321674, guid: 6e93b6fa7c0fa55418816a2dd47464db, type: 3}
+      propertyPath: playlist
+      value: 
+      objectReference: {fileID: 11400000, guid: 84c2fb5a8eb148b448f64e9e402ab7f9, type: 2}
+    - target: {fileID: 8811085439629926130, guid: 6e93b6fa7c0fa55418816a2dd47464db, type: 3}
+      propertyPath: m_Name
+      value: MusicManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084513034176878272, guid: 6e93b6fa7c0fa55418816a2dd47464db, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 113.40694
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084513034176878272, guid: 6e93b6fa7c0fa55418816a2dd47464db, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 850.642
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084513034176878272, guid: 6e93b6fa7c0fa55418816a2dd47464db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.2792912
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084513034176878272, guid: 6e93b6fa7c0fa55418816a2dd47464db, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084513034176878272, guid: 6e93b6fa7c0fa55418816a2dd47464db, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084513034176878272, guid: 6e93b6fa7c0fa55418816a2dd47464db, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084513034176878272, guid: 6e93b6fa7c0fa55418816a2dd47464db, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084513034176878272, guid: 6e93b6fa7c0fa55418816a2dd47464db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084513034176878272, guid: 6e93b6fa7c0fa55418816a2dd47464db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084513034176878272, guid: 6e93b6fa7c0fa55418816a2dd47464db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6e93b6fa7c0fa55418816a2dd47464db, type: 3}
 --- !u!114 &165845982 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
@@ -223,8 +284,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 586246393}
     m_Modifications:
     - target: {fileID: 1394715418255101245, guid: 3e1e59d3be177694e910bfb650d34fd0, type: 3}
+<<<<<<< HEAD
+      propertyPath: m_ChunkCullingBounds.y
+      value: 2.08
+=======
       propertyPath: m_SortingOrder
       value: -1
+>>>>>>> bd218c2bebf4096dee0c07e82e3645d59ee1567d
       objectReference: {fileID: 0}
     - target: {fileID: 1467283275865991506, guid: 3e1e59d3be177694e910bfb650d34fd0, type: 3}
       propertyPath: m_Name
@@ -271,8 +337,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2103670639450626463, guid: 3e1e59d3be177694e910bfb650d34fd0, type: 3}
+<<<<<<< HEAD
+      propertyPath: m_ChunkCullingBounds.x
+      value: 2.0760002
+      objectReference: {fileID: 0}
+    - target: {fileID: 2103670639450626463, guid: 3e1e59d3be177694e910bfb650d34fd0, type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 2.9272003
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412543066706169257, guid: 3e1e59d3be177694e910bfb650d34fd0, type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 2.08
+=======
       propertyPath: m_SortingOrder
       value: 0
+>>>>>>> bd218c2bebf4096dee0c07e82e3645d59ee1567d
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1927,3 +2006,4 @@ SceneRoots:
   - {fileID: 1291489331}
   - {fileID: 8445073258787145333}
   - {fileID: 378793889}
+  - {fileID: 129521373}
