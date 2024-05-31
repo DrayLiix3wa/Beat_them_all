@@ -25,5 +25,5 @@ MonoBehaviour:
   isLoose: 1
   timeToWin: 120
   killsToWin: 20
-  killCount: 0
-  chrono: 0
+  killCount: 60
+  chrono: 11
