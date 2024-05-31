@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Hub.unity
+    guid: 4977279ab77903941ae6fad393373478
+  - enabled: 1
     path: Assets/Scenes/lvl_farwest.unity
     guid: ffc4de310a09cba4c9417e2b981e9f06
+  - enabled: 1
+    path: Assets/Scenes/lvl_horror.unity
+    guid: 364391d7abe27d64ab9d34d37f13f534
   m_configObjects: {}
