@@ -34,8 +34,8 @@ public class SO_Level : ScriptableObject
     private void OnEnable()
     {
         killCount = 0;
-        isWin = false;
-        isLoose = true;
+        //isWin = false;
+        //isLoose = true;
         chrono = 0;
     }
 }
