@@ -26,11 +26,11 @@ public class DoorHub : MonoBehaviour
     {
         if(door.isOpen)
         {
-            lightCheck.color = Color.green;
+            lightCheck.color = Color.red;
         }
         else
         {
-            lightCheck.color= Color.red;
+            lightCheck.color= Color.green;
         }
     }
 
@@ -48,16 +48,23 @@ public class DoorHub : MonoBehaviour
 
         if (collision.CompareTag(playerTag))
         {
-            infoBox.SetActive(true);
 
             if (door.isOpen)
             {
+                infoBox.SetActive(true);
+            }
+            else
+            {
+                infoBox.SetActive(false);
             }
         }
 
         if (collision.CompareTag(playerCollectTag))
         {
-            _gameManager.LoadScene(door.level.sceneName);
+            if (door.isOpen)
+            {
+                _gameManager.LoadScene(door.level.sceneName);
+            }
         }
     }
 

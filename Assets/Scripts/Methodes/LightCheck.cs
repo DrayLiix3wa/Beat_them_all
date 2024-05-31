@@ -18,11 +18,11 @@ public class LightCheck : MonoBehaviour
         {
             if(door.level.isWin)
             {
-                door.isOpen = true;
+                door.isOpen = false;
             }
             else
             {
-                door.isOpen = false;
+                door.isOpen = true;
             }
         }
     }
