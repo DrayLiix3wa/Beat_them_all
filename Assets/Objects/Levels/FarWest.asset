@@ -21,9 +21,9 @@ MonoBehaviour:
     ici. Bonne chance, cow-boy !"
   levelPortrait: {fileID: 1538979966, guid: f9d1437fb7f4a5f46b1129921303178f, type: 3}
   sceneName: lvl_farwest
-  isWin: 0
+  isWin: 1
   isLoose: 1
   timeToWin: 120
   killsToWin: 20
-  killCount: 60
-  chrono: 11
+  killCount: 9
+  chrono: 120
