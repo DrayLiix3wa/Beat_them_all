@@ -318,9 +318,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3985836501994354115, guid: 382a9dcd737a4c3409fe253174b0cbef, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5037260298441551711, guid: 382a9dcd737a4c3409fe253174b0cbef, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5746248372789630186, guid: 382a9dcd737a4c3409fe253174b0cbef, type: 3}
       propertyPath: m_Name
       value: InfoItemCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6224530623992600281, guid: 382a9dcd737a4c3409fe253174b0cbef, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -77446,6 +77446,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhiskeyStamina
       objectReference: {fileID: 0}
+    - target: {fileID: 3811869370962080134, guid: 277a3c21dcad4a54f901628d4033bda9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066833653712235290, guid: 277a3c21dcad4a54f901628d4033bda9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5621295541945402951, guid: 277a3c21dcad4a54f901628d4033bda9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -77485,6 +77493,14 @@ PrefabInstance:
     - target: {fileID: 5621295541945402951, guid: 277a3c21dcad4a54f901628d4033bda9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185423946709783196, guid: 277a3c21dcad4a54f901628d4033bda9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324981575489927717, guid: 277a3c21dcad4a54f901628d4033bda9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
