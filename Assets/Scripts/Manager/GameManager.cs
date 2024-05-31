@@ -35,19 +35,31 @@ public class GameManager : MonoBehaviour
     public UnityEvent onEnd = new UnityEvent();
     public UnityEvent onWin = new UnityEvent();
 
-    public SO_Level StateLevel;
+    public SO_Level currentLvl;
     public SO_Level hub_level;
+
+    public SO_Level[] levels;
+
+    public bool isHub = false;
+    public bool isGameStarted = false;
 
     #region Unity Lifecycle
 
     private void Awake()
     {
 
-        TransitionToState(GameState.START);
-
-        if(StateLevel == null && hub_level)
+        if (isHub && isGameStarted)
         {
-            StateLevel = hub_level;
+            TransitionToState(GameState.PLAY);
+        }
+        else
+        {
+            TransitionToState(GameState.START);
+        }
+
+        if (currentLvl == null && hub_level)
+        {
+            currentLvl = hub_level;
         }
     }
 
@@ -79,7 +91,7 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.END:
                 Time.timeScale = 0;
-                if (StateLevel.isWin)
+                if (currentLvl.isWin)
                 {
                     onWin.Invoke();
                 }
@@ -108,7 +120,7 @@ public class GameManager : MonoBehaviour
                 {
                     TransitionToState(GameState.PAUSE);
                 }
-                else if (isEnd || StateLevel.isWin)
+                else if (isEnd || currentLvl.isWin)
                 {
                     TransitionToState(GameState.END);
                 }
@@ -122,7 +134,7 @@ public class GameManager : MonoBehaviour
                 {
                     TransitionToState(GameState.PAUSE);
                 }
-                else if (isEnd || StateLevel.isWin)
+                else if (isEnd || currentLvl.isWin)
                 {
                     TransitionToState(GameState.END);
                 }
@@ -136,7 +148,7 @@ public class GameManager : MonoBehaviour
                 {
                     TransitionToState(GameState.PLAY);
                 }
-                else if (isEnd || StateLevel.isWin)
+                else if (isEnd || currentLvl.isWin)
                 {
                     TransitionToState(GameState.END);
                 }
@@ -213,13 +225,12 @@ public class GameManager : MonoBehaviour
     {
         isPlay = true;
     }
-    #endregion
 
     public void GameOver()
     {
         isEnd = true;
     }
-    
+
     public void GoToHub()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(hub_level.sceneName);
@@ -241,19 +252,35 @@ public class GameManager : MonoBehaviour
         switch (context.phase)
         {
             case InputActionPhase.Performed:
-                if ( isPlay )
+                if (isPlay)
                 {
                     PauseGame();
                 }
-                else if ( isPause )
+                else if (isPause)
                 {
                     ResumeGame();
                 }
                 break;
             case InputActionPhase.Canceled:
-                    break;
+                break;
             default:
                 break;
         }
     }
+    #endregion
+
+
+    #region Private Methods
+    // fonction pour voir si un niveau est gagné
+    private void CheckWin()
+    {
+        foreach (SO_Level lvl in levels)
+        {
+            if (lvl.isWin)
+            {
+                isGameStarted = true;
+            }
+        }
+    }
+    #endregion
 }
