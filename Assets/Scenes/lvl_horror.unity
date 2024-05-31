@@ -547,6 +547,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2047815028213316277, guid: 4d8c4e1dffff1194ea530be6f02094ce, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3164541167247733142, guid: 4d8c4e1dffff1194ea530be6f02094ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -8552,8 +8556,8 @@ SceneRoots:
   - {fileID: 952815492}
   - {fileID: 934081874}
   - {fileID: 586246393}
-  - {fileID: 1291489331}
   - {fileID: 378793889}
   - {fileID: 1452054167}
   - {fileID: 1640814749}
   - {fileID: 552988735}
+  - {fileID: 1291489331}
