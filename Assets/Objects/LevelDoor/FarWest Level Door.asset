@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40af808158ddcc418f3764c213c206b, type: 3}
   m_Name: FarWest Level Door
   m_EditorClassIdentifier: 
-  isOpen: 1
+  isOpen: 0
   level: {fileID: 11400000, guid: 665f227abbf85aa459a285ec5ceebefa, type: 2}

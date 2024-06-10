@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Hub
   m_EditorClassIdentifier: 
   levelName: Hub
+  levelTitle: 
+  levelDescription: 
+  levelPortrait: {fileID: 0}
   sceneName: Hub
   isWin: 0
-  isLoose: 1
+  isLoose: 0
   timeToWin: 180
   killsToWin: 30
   killCount: 0
