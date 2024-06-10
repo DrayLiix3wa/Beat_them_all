@@ -1317,10 +1317,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sueur
       objectReference: {fileID: 0}
-    - target: {fileID: 6088879967063268456, guid: 8cbb332e2a1c9c342a4ef8fac0a34aa9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
