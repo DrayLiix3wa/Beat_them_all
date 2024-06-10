@@ -16,7 +16,4 @@ MonoBehaviour:
   sounds:
   - name: music_1
     clip: {fileID: 8300000, guid: 3351f1fbc9faa204bb14b89314fc89ba, type: 3}
-    volume: 1
-  - name: music_2
-    clip: {fileID: 8300000, guid: 8def4b5432c0e784e9370e8b2a7d1c83, type: 3}
-    volume: 1
+    volume: 0.5
