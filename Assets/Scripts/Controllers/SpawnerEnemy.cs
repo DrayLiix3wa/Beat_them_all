@@ -13,7 +13,14 @@ public class Wave
 public class SpawnerEnemy : MonoBehaviour
 {
     public Wave[] myWaves;
+    [Space(10)]
+
+    [Header("Set Timer To Win")]
     public bool setTimerToWin = false;
+    public SO_objectPool enemieToSpawnOnTimer;
+    public float spawnInterval = 15f;
+
+    [Space(10)]
     int waveCount = 0;
     bool isRunning = true;
     public PoolsManager poolsManager;
@@ -35,6 +42,11 @@ public class SpawnerEnemy : MonoBehaviour
         {
             StartCoroutine(Spawn(waveCount));
         }
+
+        if (isRunning == true && setTimerToWin == true)
+        {
+            StartCoroutine(SpawnEnemiesCoroutine());
+        }
     }
 
     void Update()
@@ -54,30 +66,6 @@ public class SpawnerEnemy : MonoBehaviour
                 }
                 
             }
-        }
-        else
-        {
-            if (CheckEnemieCount() == 0)
-            {
-                waveCount++;
-                if (waveCount < myWaves.Length)
-                {
-                    isRunning = true;
-                    Start();
-                }
-                else
-                {
-                    isRunning = false;
-                }
-
-            }
-
-            if ( waveCount == 0 && level.chrono > _timeVague )
-            {
-                waveCount = 0;
-                Start();
-            }
- 
         }
     }
 
@@ -112,6 +100,39 @@ public class SpawnerEnemy : MonoBehaviour
         isRunning = false;
 
     }
+
+
+    IEnumerator SpawnEnemiesCoroutine()
+    {
+        int maxEnemies = 100;
+        int count = 0; 
+
+        while (count < maxEnemies)
+        {
+            for (int i = 0; i < 5 && count < maxEnemies; i++)
+            {
+                Vector2 spawnPos;
+
+                if (spawnerSpots != null && spawnerSpots.Length > 0)
+                {
+                    int randomSpot = Random.Range(0, spawnerSpots.Length);
+                    spawnPos = (Vector2)spawnerSpots[randomSpot].transform.position;
+                }
+                else
+                {
+                    spawnPos = (Vector2)transform.position; 
+                }
+
+                GameObject enemy = poolsManager.GetObjectFromPool(enemieToSpawnOnTimer.poolName); 
+                if (enemy != null) 
+                {
+                    enemy.transform.position = spawnPos; 
+                }
+            }
+            yield return new WaitForSeconds(spawnInterval);
+        }
+    }
+
 
     private void OnValidate()
     {
