@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolName: HorreurEnemy
   prefab: {fileID: 9044241618207105416, guid: 5c1348027bdb5794ca508f2c7aa4c692, type: 3}
-  initialSize: 30
+  initialSize: 100
   objectsActive: 0
   objectsInactive: 0
