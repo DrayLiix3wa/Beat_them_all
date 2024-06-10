@@ -515,110 +515,126 @@ public class PlayerController : MonoBehaviour
 
     public void WeakAttackInput(InputAction.CallbackContext context)
     {
-        switch (context.phase)
+        if (Time.deltaTime != 0)
         {
-            case InputActionPhase.Performed:
-                //Stamina Check
-                
-                if (staminaManager.current >= weakHitStaminaCost)
-                {
-                    _isAttacking = true;
-                    
-                }
-                else
-                {
-                    onStaminaNotEnough.Invoke();
-                    _isStaminaless = true;
-                }
-                break;
-            case InputActionPhase.Canceled:
-                _isAttacking = false;
-                break;
-            default:
-                break;
+            switch (context.phase)
+            {
+                case InputActionPhase.Performed:
+                    //Stamina Check
+
+                    if (staminaManager.current >= weakHitStaminaCost)
+                    {
+                        _isAttacking = true;
+
+                    }
+                    else
+                    {
+                        onStaminaNotEnough.Invoke();
+                        _isStaminaless = true;
+                    }
+                    break;
+                case InputActionPhase.Canceled:
+                    _isAttacking = false;
+                    break;
+                default:
+                    break;
+            }
         }
+
     }
 
     public void StrongAttackInput(InputAction.CallbackContext context)
     {
-        switch (context.phase)
+        if (Time.deltaTime != 0)
         {
-            case InputActionPhase.Performed:
-                //Stamina Check
-                
-                if (staminaManager.current >= strongHitStaminaCost)
-                {
-                    _isBigAttacking = true;
-                    
-                }
-                else
-                {
-                    onStaminaNotEnough.Invoke();
-                    _isStaminaless = true;
-                }
-                break;
-            case InputActionPhase.Canceled:
-                _isBigAttacking = false;
-                break;
-            default:
-                break;
+            switch (context.phase)
+            {
+                case InputActionPhase.Performed:
+                    //Stamina Check
+
+                    if (staminaManager.current >= strongHitStaminaCost)
+                    {
+                        _isBigAttacking = true;
+
+                    }
+                    else
+                    {
+                        onStaminaNotEnough.Invoke();
+                        _isStaminaless = true;
+                    }
+                    break;
+                case InputActionPhase.Canceled:
+                    _isBigAttacking = false;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
     public void DashInput(InputAction.CallbackContext context)
     {
-        switch (context.phase)
+        if (Time.deltaTime != 0)
         {
-            case InputActionPhase.Performed:
-                //Stamina Check
-                if (staminaManager.current >= dashCost)
-                {
-                    _isDashing = true;
-                    
-                }
-                else
-                {
-                    onStaminaNotEnough.Invoke();
-                    _isStaminaless = true;
-                }
-                break;
-            case InputActionPhase.Canceled:
-                //_isDashing = false;
-                break;
-            default:
-                break;
+            switch (context.phase)
+            {
+                case InputActionPhase.Performed:
+                    //Stamina Check
+                    if (staminaManager.current >= dashCost)
+                    {
+                        _isDashing = true;
+
+                    }
+                    else
+                    {
+                        onStaminaNotEnough.Invoke();
+                        _isStaminaless = true;
+                    }
+                    break;
+                case InputActionPhase.Canceled:
+                    //_isDashing = false;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
     public void BlockInput(InputAction.CallbackContext context)
     {
-        switch (context.phase)
+        if (Time.deltaTime != 0)
         {
-            case InputActionPhase.Performed:
-                _isBlocking = true;
-                break;
-            case InputActionPhase.Canceled:
-                _isBlocking = false;
-                break;
-            default:
-                break;
+            switch (context.phase)
+            {
+                case InputActionPhase.Performed:
+                    _isBlocking = true;
+                    break;
+                case InputActionPhase.Canceled:
+                    _isBlocking = false;
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
     public void InteractInput(InputAction.CallbackContext context)
     {
-        switch (context.phase)
+        if (Time.deltaTime != 0)
         {
-            case InputActionPhase.Performed:
-                _isInteracting = true;
-                collectCollider.enabled = true;
-                break;
-            case InputActionPhase.Canceled:
-                _isInteracting = false;
-                collectCollider.enabled = false;
-                break;
-            default:
-                break;
+            switch (context.phase)
+            {
+                case InputActionPhase.Performed:
+                    _isInteracting = true;
+                    collectCollider.enabled = true;
+                    break;
+                case InputActionPhase.Canceled:
+                    _isInteracting = false;
+                    collectCollider.enabled = false;
+                    break;
+                default:
+                    break;
+            }
         }
     }
     #endregion
