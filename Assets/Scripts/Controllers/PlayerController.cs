@@ -91,14 +91,14 @@ public class PlayerController : MonoBehaviour
     {
        if  (!_isDashing && !_isDead && !_isHurting && _moveBuffer) 
         {
-            if (_isMoving)
+            /*if (_isMoving)
             {
                 playerGraphics.SetBool("isWalking", true);
             }
             else
             {
                 playerGraphics.SetBool("isWalking", false);
-            }
+            }*/
             
             moveAction.MoveProcess(_inputDirection);
         }
@@ -136,7 +136,7 @@ public class PlayerController : MonoBehaviour
                 playerGraphics.SetBool("isIdle", true);
                 break;
             case PlayerState.WALK:
-                //playerGraphics.SetBool("isWalking", true);
+                playerGraphics.SetBool("isWalking", true);
                 break;
             case PlayerState.ATTACK:
                 _attackAnimation = true;
@@ -452,6 +452,7 @@ public class PlayerController : MonoBehaviour
                 playerGraphics.SetBool("isIdle", false);
                 break;
             case PlayerState.WALK:
+                playerGraphics.SetBool("isWalking", false);
                 break;
             case PlayerState.ATTACK:
                 _isAttacking = false;
