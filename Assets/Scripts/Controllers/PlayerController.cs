@@ -91,11 +91,11 @@ public class PlayerController : MonoBehaviour
     {
        if  (!_isDashing && !_isDead && !_isHurting && _moveBuffer) 
         {
-            /*if (_isMoving)
+            if (_isMoving && _isBlocking)
             {
                 playerGraphics.SetBool("isWalking", true);
             }
-            else
+            /*else
             {
                 playerGraphics.SetBool("isWalking", false);
             }*/
@@ -506,6 +506,7 @@ public class PlayerController : MonoBehaviour
                 break;
             case InputActionPhase.Canceled:
                 _isMoving = false;
+                playerGraphics.SetBool("isWalking", false);
                 _inputDirection = new Vector2(0, 0);
                 break;
             default:
