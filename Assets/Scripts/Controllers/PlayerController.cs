@@ -394,6 +394,10 @@ public class PlayerController : MonoBehaviour
                 {
                     TransitionToState(PlayerState.ATTACK);
                 }
+                else if (_isBigAttacking)
+                {
+                    TransitionToState(PlayerState.BIG_ATTACK);
+                }
                 else if (_isStaminaless)
                 {
                     TransitionToState(PlayerState.STAMINALESS);
