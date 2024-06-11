@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &11827557 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6734762441782608272, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+  m_PrefabInstance: {fileID: 485539127}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da44666c0ee5eae448c7129295903b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &35393674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -568,33 +579,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5556324978383773780, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5556324978383773780, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5556324978383773780, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: onStaminaNotEnough.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11400000, guid: 665f227abbf85aa459a285ec5ceebefa, type: 2}
-    - target: {fileID: 5556324978383773780, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5556324978383773780, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: KillCountAdd
-      objectReference: {fileID: 0}
-    - target: {fileID: 5556324978383773780, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SO_Level, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5556324978383773780, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
-      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11827557}
     - target: {fileID: 7762796396727158984, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -640,33 +627,9 @@ PrefabInstance:
       value: FarWestPlayerObject
       objectReference: {fileID: 0}
     - target: {fileID: 8740200352538780546, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740200352538780546, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740200352538780546, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
       propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2037338297}
-    - target: {fileID: 8740200352538780546, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740200352538780546, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PauseGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740200352538780546, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740200352538780546, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
-      propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
