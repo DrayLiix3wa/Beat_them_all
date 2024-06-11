@@ -20,6 +20,7 @@ public class InvincibilityManager : MonoBehaviour
 
     private IEnumerator InvincibilityCoroutine(float invincibilityDuration, Color flashColor, int numberOfFlashes)
     {
+        Debug.Log("StartInvincibilityCoroutine");
         hitBox.isInvincible = true;
         yield return _spriteFlash.FlashCoroutine(invincibilityDuration, flashColor, numberOfFlashes);
         hitBox.isInvincible = false;

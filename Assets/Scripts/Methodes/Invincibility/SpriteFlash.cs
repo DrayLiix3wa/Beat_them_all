@@ -7,9 +7,14 @@ public class SpriteFlash : MonoBehaviour
     public SpriteRenderer _spriteRenderer;
     private Color startColor;
 
-    public void Start()
+    public void Awake()
     {
         startColor = _spriteRenderer.color;
+    }
+
+    private void OnEnable()
+    {
+        _spriteRenderer.color = startColor;
     }
 
     public void StartSpriteFlash(float flashDuration, Color flashColor, int numberOfFlashes)
