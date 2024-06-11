@@ -31,6 +31,12 @@ public class LevelManager : MonoBehaviour
     private bool _timerActive = false;
     private float currentHealth;
 
+
+    private void Awake()
+    {
+        ResetLevel();
+    }
+
     private void Update()
     {
         currentHealth = StatsPlayer.health;
@@ -87,5 +93,11 @@ public class LevelManager : MonoBehaviour
             StateLevel.chrono = (int)chrono; 
             yield return null;
         }
+    }
+
+    public void ResetLevel()
+    {
+        StateLevel.chrono = 0;
+        StateLevel.killCount = 0;
     }
 }
