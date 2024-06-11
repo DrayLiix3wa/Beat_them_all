@@ -607,6 +607,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5385270495884599636, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1905712435, guid: 5cd867a7518b1864f8872dac4baa9c40, type: 3}
     - target: {fileID: 5556324978383773780, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -677,8 +681,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8197891318886150358, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
       propertyPath: m_Name
-      value: FarWestPlayerObject
+      value: HorrorPlayerObject
       objectReference: {fileID: 0}
+    - target: {fileID: 8289004076865207086, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b7c0b86a9a199ef4a9db08d03e5ea3a2, type: 2}
     - target: {fileID: 8740200352538780546, guid: efb2fbaf2cafbbf468cfe9a40812fc34, type: 3}
       propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.size
       value: 1
