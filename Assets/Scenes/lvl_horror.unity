@@ -502,6 +502,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: curve.m_Curve.Array.data[1].time
+      value: 0.32351416
+      objectReference: {fileID: 0}
+    - target: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: curve.m_Curve.Array.data[2].time
+      value: 0.73072785
+      objectReference: {fileID: 0}
+    - target: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: curve.m_Curve.Array.data[1].value
+      value: 0.20090479
+      objectReference: {fileID: 0}
+    - target: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: curve.m_Curve.Array.data[2].value
+      value: 0.42935145
+      objectReference: {fileID: 0}
+    - target: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: curve.m_Curve.Array.data[0].inSlope
+      value: 0.6210077
+      objectReference: {fileID: 0}
+    - target: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: curve.m_Curve.Array.data[3].inSlope
+      value: -1.5944889
+      objectReference: {fileID: 0}
+    - target: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: curve.m_Curve.Array.data[0].outSlope
+      value: 0.6210077
+      objectReference: {fileID: 0}
+    - target: {fileID: 999774861954601247, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: curve.m_Curve.Array.data[3].outSlope
+      value: -1.5944889
+      objectReference: {fileID: 0}
     - target: {fileID: 4293857736439451235, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -7541,9 +7573,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8734001331037298468, guid: b34a59c9fe6497443bf2bffd37b08dbd, type: 3}
+      propertyPath: healthPool
+      value: 
+      objectReference: {fileID: 11400000, guid: de699ddf083291945ba8461403b48d3d, type: 2}
+    - target: {fileID: 8734001331037298468, guid: b34a59c9fe6497443bf2bffd37b08dbd, type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 346ff318c8fda5244857707e49d9b303, type: 2}
+    - target: {fileID: 8734001331037298468, guid: b34a59c9fe6497443bf2bffd37b08dbd, type: 3}
       propertyPath: poolManager
       value: 
       objectReference: {fileID: 1921831617}
+    - target: {fileID: 8734001331037298468, guid: b34a59c9fe6497443bf2bffd37b08dbd, type: 3}
+      propertyPath: staminaPool
+      value: 
+      objectReference: {fileID: 11400000, guid: 7bfad14119ee58d4a9d7c6895268ed31, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
