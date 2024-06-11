@@ -11,7 +11,7 @@ public class WipeController : MonoBehaviour
 
     public float circleSize = 0;
 
-    void Start()
+    void Awake()
     {
         _animator = gameObject.GetComponent<Animator>();
         _image = gameObject.GetComponent<Image>();
