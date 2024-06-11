@@ -7573,9 +7573,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8734001331037298468, guid: b34a59c9fe6497443bf2bffd37b08dbd, type: 3}
+      propertyPath: healthPool
+      value: 
+      objectReference: {fileID: 11400000, guid: de699ddf083291945ba8461403b48d3d, type: 2}
+    - target: {fileID: 8734001331037298468, guid: b34a59c9fe6497443bf2bffd37b08dbd, type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 346ff318c8fda5244857707e49d9b303, type: 2}
+    - target: {fileID: 8734001331037298468, guid: b34a59c9fe6497443bf2bffd37b08dbd, type: 3}
       propertyPath: poolManager
       value: 
       objectReference: {fileID: 1921831617}
+    - target: {fileID: 8734001331037298468, guid: b34a59c9fe6497443bf2bffd37b08dbd, type: 3}
+      propertyPath: staminaPool
+      value: 
+      objectReference: {fileID: 11400000, guid: 7bfad14119ee58d4a9d7c6895268ed31, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -191,7 +191,7 @@ MonoBehaviour:
   OnPickUp:
     m_PersistentCalls:
       m_Calls: []
-  itemValue: 10
+  itemValue: 30
   destroyDelay: 0.5
   type: 1
   objectPool: {fileID: 11400000, guid: 7bfad14119ee58d4a9d7c6895268ed31, type: 2}
