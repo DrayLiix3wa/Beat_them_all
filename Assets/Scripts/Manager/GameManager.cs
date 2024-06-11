@@ -79,6 +79,10 @@ public class GameManager : MonoBehaviour
         switch (currentState)
         {
             case GameState.START:
+                if(wipeController)
+                {
+                    wipeController.WipeIn();
+                }
                 onStart.Invoke();
                 Time.timeScale = 0;
                 isStart = true;
