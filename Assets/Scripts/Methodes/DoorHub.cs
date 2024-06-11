@@ -10,6 +10,7 @@ public class DoorHub : MonoBehaviour
     public string playerTag;
     public string playerCollectTag;
     public GameObject infoBox;
+    public GameObject Door;
 
     [SerializeField]
     private GameManager _gameManager;
@@ -27,10 +28,12 @@ public class DoorHub : MonoBehaviour
         if(door.isOpen)
         {
             lightCheck.color = Color.red;
+            Door.SetActive(false);
         }
         else
         {
             lightCheck.color= Color.green;
+            Door.SetActive(true);
         }
     }
 
