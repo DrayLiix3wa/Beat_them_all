@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
     public bool isHub = false;
     public bool isGameStarted = false;
 
+    public WipeController wipeController;
+
     #region Unity Lifecycle
 
     private void Awake()
@@ -235,7 +237,14 @@ public class GameManager : MonoBehaviour
 
     public void GoToHub()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(hub_level.sceneName);
+        if (wipeController)
+        {
+            StartCoroutine(LoadSceneWithWipe(hub_level.sceneName, true));
+        }
+        else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(hub_level.sceneName);
+        }
     }
 
     public void RestartGame()
@@ -243,10 +252,34 @@ public class GameManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
+    public IEnumerator LoadSceneWithWipe(string sceneName, bool wipeIn)
+    {
+        if (wipeIn)
+        {
+            wipeController.WipeIn();
+        }
+        else
+        {
+            wipeController.WipeOut();
+        }
+
+        yield return new WaitForSeconds(1.5f);
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+    }
+
     // fonction pour charger une scene
     public void LoadScene(string sceneName)
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+        if(wipeController)
+        {
+            StartCoroutine(LoadSceneWithWipe(sceneName, false));
+        }
+        else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+        }
+
     }
 
     public void Pause(InputAction.CallbackContext context)
