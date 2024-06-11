@@ -1127,6 +1127,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 9d4c57088f170554eb6b1bd2fc66dc5d, type: 2}
     - target: {fileID: 8734001331037298468, guid: b34a59c9fe6497443bf2bffd37b08dbd, type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 346ff318c8fda5244857707e49d9b303, type: 2}
+    - target: {fileID: 8734001331037298468, guid: b34a59c9fe6497443bf2bffd37b08dbd, type: 3}
       propertyPath: poolManager
       value: 
       objectReference: {fileID: 1921831617}
