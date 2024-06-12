@@ -28,7 +28,6 @@ public class LevelManager : MonoBehaviour
     public GameManager _gameManager;
 
     [SerializeField]
-    private bool _timerActive = false;
     private float currentHealth;
 
 
@@ -37,11 +36,15 @@ public class LevelManager : MonoBehaviour
         ResetLevel();
     }
 
+    public void Start()
+    {
+        StartCoroutine(Chrono());
+    }
+
     private void Update()
     {
         currentHealth = StatsPlayer.health;
         UpdateLevel();
-        ManageChrono();
     }
 
     private void UpdateLevel()
@@ -71,25 +74,12 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private void ManageChrono()
-    {
-        if ( _gameManager.currentState == GameState.PLAY && !_timerActive )
-        {
-            StartCoroutine( Chrono() );
-            _timerActive = true;
-        }
-        else if (_gameManager.currentState != GameState.PLAY && _timerActive)
-        {
-            StopCoroutine(Chrono());
-            _timerActive = false;
-        }
-    }
-
     private IEnumerator Chrono()
     {
         while (chrono <= StateLevel.timeToWin)
         {
-            chrono += Time.deltaTime; 
+            chrono += Time.deltaTime;
+
             StateLevel.chrono = (int)chrono; 
             yield return null;
         }

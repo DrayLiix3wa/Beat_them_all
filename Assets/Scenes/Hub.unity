@@ -676,6 +676,18 @@ PrefabInstance:
       propertyPath: anchor
       value: 
       objectReference: {fileID: 634179587}
+    - target: {fileID: 8227987691499101510, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227987691499101510, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227987691499101510, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1874,7 +1886,7 @@ PrefabInstance:
       objectReference: {fileID: 1282796089}
     - target: {fileID: 2845622379660770352, guid: e5b85da8242ba94439275e8ebe340693, type: 3}
       propertyPath: onWinGame.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2845622379660770352, guid: e5b85da8242ba94439275e8ebe340693, type: 3}
       propertyPath: onWinGame.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -1926,7 +1938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2845622379660770352, guid: e5b85da8242ba94439275e8ebe340693, type: 3}
       propertyPath: onWinGame.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PauseGame
+      value: TimeScale
       objectReference: {fileID: 0}
     - target: {fileID: 2845622379660770352, guid: e5b85da8242ba94439275e8ebe340693, type: 3}
       propertyPath: onWinGame.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
