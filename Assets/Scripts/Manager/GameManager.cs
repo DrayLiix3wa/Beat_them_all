@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent onPauseExit = new UnityEvent();
     public UnityEvent onEnd = new UnityEvent();
     public UnityEvent onWin = new UnityEvent();
+    public UnityEvent onWinGame = new UnityEvent();
 
     public SO_Level currentLvl;
     public SO_Level hub_level;
@@ -55,6 +56,10 @@ public class GameManager : MonoBehaviour
         {
             wipeController.WipeIn();
             TransitionToState(GameState.PLAY);
+            if(CheckAllWin())
+            {
+                onWinGame.Invoke();
+            }
         }
         else
         {
@@ -309,6 +314,17 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+
+    public void Restart()
+    {
+        foreach (SO_Level lvl in levels)
+        {
+            lvl.isWin = false;
+        }
+
+        RestartGame();
+    }
+
     #endregion
 
 
@@ -323,6 +339,20 @@ public class GameManager : MonoBehaviour
                 isGameStarted = true;
             }
         }
+    }
+
+    // fonction pour voir si tous les niveaux sont gagnés
+    private bool CheckAllWin()
+    {
+        foreach (SO_Level lvl in levels)
+        {
+            if (!lvl.isWin)
+            {
+                return false;
+            }
+        }
+        
+        return true;
     }
     #endregion
 }
