@@ -1098,6 +1098,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6888788580995217868, guid: e5b85da8242ba94439275e8ebe340693, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 1527215077}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1180,6 +1184,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6776e3d309d6bf4ba121714249d9447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1527215077 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 283449528784714008, guid: e5b85da8242ba94439275e8ebe340693, type: 3}
+  m_PrefabInstance: {fileID: 1258288817}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1569381929 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4842202016348508502, guid: 20f95a7d009533e46898e4e1153c63d9, type: 3}
