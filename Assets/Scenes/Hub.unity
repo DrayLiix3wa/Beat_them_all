@@ -1049,6 +1049,14 @@ PrefabInstance:
       propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2845622379660770352, guid: e5b85da8242ba94439275e8ebe340693, type: 3}
+      propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 844171973490571390}
+    - target: {fileID: 2845622379660770352, guid: e5b85da8242ba94439275e8ebe340693, type: 3}
+      propertyPath: onPauseEnter.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 844171973490571391}
     - target: {fileID: 5580976806414856317, guid: e5b85da8242ba94439275e8ebe340693, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -21551,6 +21559,16 @@ GameObject:
 --- !u!1 &844171973490571389 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2481844877878838210, guid: 20f95a7d009533e46898e4e1153c63d9, type: 3}
+  m_PrefabInstance: {fileID: 844171973490571386}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &844171973490571390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7053278423584307158, guid: 20f95a7d009533e46898e4e1153c63d9, type: 3}
+  m_PrefabInstance: {fileID: 844171973490571386}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &844171973490571391 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2629132985039459284, guid: 20f95a7d009533e46898e4e1153c63d9, type: 3}
   m_PrefabInstance: {fileID: 844171973490571386}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &844171973490571393 stripped
