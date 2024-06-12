@@ -2355,6 +2355,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 781157649224954525, guid: a9371801a41b61a4da8f5a5a86279989, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.65
+      objectReference: {fileID: 0}
     - target: {fileID: 1078648229557030135, guid: a9371801a41b61a4da8f5a5a86279989, type: 3}
       propertyPath: door
       value: 
@@ -2363,6 +2367,14 @@ PrefabInstance:
       propertyPath: _gameManager
       value: 
       objectReference: {fileID: 170184490}
+    - target: {fileID: 1486142395645397241, guid: a9371801a41b61a4da8f5a5a86279989, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486142395645397241, guid: a9371801a41b61a4da8f5a5a86279989, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2430606106294700215, guid: a9371801a41b61a4da8f5a5a86279989, type: 3}
       propertyPath: m_Name
       value: door_Horror
@@ -23060,10 +23072,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 781157649224954525, guid: a9371801a41b61a4da8f5a5a86279989, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.67
+      objectReference: {fileID: 0}
     - target: {fileID: 1078648229557030135, guid: a9371801a41b61a4da8f5a5a86279989, type: 3}
       propertyPath: _gameManager
       value: 
       objectReference: {fileID: 170184490}
+    - target: {fileID: 1486142395645397241, guid: a9371801a41b61a4da8f5a5a86279989, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486142395645397241, guid: a9371801a41b61a4da8f5a5a86279989, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2430606106294700215, guid: a9371801a41b61a4da8f5a5a86279989, type: 3}
       propertyPath: m_Name
       value: door_FarWest
