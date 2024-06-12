@@ -243,10 +243,12 @@ public class GameManager : MonoBehaviour
     {
         if (wipeController)
         {
-            StartCoroutine(LoadSceneWithWipe(hub_level.sceneName, true));
+            Debug.Log("Go hub with wipe");
+            StartCoroutine(LoadSceneWithWipe(hub_level.sceneName, false));
         }
         else
         {
+            Debug.Log("Go hub no wipe");
             UnityEngine.SceneManagement.SceneManager.LoadScene(hub_level.sceneName);
         }
     }
@@ -267,7 +269,7 @@ public class GameManager : MonoBehaviour
             wipeController.WipeOut();
         }
 
-        yield return new WaitForSeconds(1.7f);
+        yield return new WaitForSecondsRealtime(1.7f);
 
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }

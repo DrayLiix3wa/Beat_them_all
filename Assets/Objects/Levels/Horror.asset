@@ -19,11 +19,11 @@ MonoBehaviour:
     \xE0 une horde de zombies affam\xE9s dans un sinistre cimeti\xE8re. Attrape ta
     batte de baseball, rassemble ton courage, et pr\xE9pare-toi \xE0 affronter l'horreur.
     Bonne chance, h\xE9ros !"
-  levelPortrait: {fileID: -1476189658, guid: 6f244f57324bd4fadb25d5faa70d9de6, type: 3}
+  levelPortrait: {fileID: -1007022408, guid: 5cd867a7518b1864f8872dac4baa9c40, type: 3}
   sceneName: lvl_horror
   isWin: 0
   isLoose: 1
   timeToWin: 120
   killsToWin: 30
   killCount: 0
-  chrono: 0
+  chrono: 11
