@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
 
         if (isHub && isGameStarted)
         {
+            wipeController.WipeIn();
             TransitionToState(GameState.PLAY);
         }
         else
