@@ -26,4 +26,4 @@ MonoBehaviour:
   timeToWin: 120
   killsToWin: 20
   killCount: 0
-  chrono: 0
+  chrono: 120

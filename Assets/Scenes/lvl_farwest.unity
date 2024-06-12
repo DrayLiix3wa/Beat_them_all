@@ -764,6 +764,10 @@ PrefabInstance:
       propertyPath: anchor
       value: 
       objectReference: {fileID: 2018891788}
+    - target: {fileID: 8055068925209734311, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 4112231606857234528, guid: 198ff9c1407e7e24388b0902111aa81f, type: 2}
     - target: {fileID: 8227987691499101510, guid: de581445e0e81a84ab4e61530c942e90, type: 3}
       propertyPath: m_BackGroundColor.b
       value: 0
