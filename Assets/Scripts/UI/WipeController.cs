@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class WipeController : MonoBehaviour
 {
+    [SerializeField]
     private Animator _animator;
     private Image _image;
     private readonly int _CircleSizeId = Shader.PropertyToID("_CircleSize");

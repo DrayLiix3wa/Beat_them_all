@@ -267,7 +267,7 @@ public class GameManager : MonoBehaviour
             wipeController.WipeOut();
         }
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.7f);
 
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
