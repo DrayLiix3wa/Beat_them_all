@@ -21,9 +21,9 @@ MonoBehaviour:
     Bonne chance, h\xE9ros !"
   levelPortrait: {fileID: -1007022408, guid: 5cd867a7518b1864f8872dac4baa9c40, type: 3}
   sceneName: lvl_horror
-  isWin: 1
+  isWin: 0
   isLoose: 1
   timeToWin: 120
   killsToWin: 30
   killCount: 0
-  chrono: 0
+  chrono: 12

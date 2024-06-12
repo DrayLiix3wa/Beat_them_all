@@ -637,8 +637,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 624740025, guid: f9d1437fb7f4a5f46b1129921303178f, type: 3}
-  m_Color: {r: 0.7169812, g: 0.22659309, b: 0.22659309, a: 1}
+  m_Sprite: {fileID: -1050928514, guid: 2a3ad12453522db4c944c5a86957a4bc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -879,7 +879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _flashDuration: 0.5
-  _flashColor: {r: 1, g: 0, b: 0, a: 0.78431374}
+  _flashColor: {r: 1, g: 1, b: 1, a: 0.78431374}
   _numberOfFlashes: 5
 --- !u!1 &8540945403737876627
 GameObject:

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   playerName: 
-  health: 40
+  health: 100
   maxHealth: 100
   damage: 0
   maxDamage: 0
