@@ -315,6 +315,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void TimeScale (float scale)
+    {
+        Time.timeScale = scale;
+    }
+
     public void Restart()
     {
         foreach (SO_Level lvl in levels)
