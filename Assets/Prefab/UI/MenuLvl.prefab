@@ -280,6 +280,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 533993153524184862, guid: 7f090f4ecbcddb940bafd019f8597844, type: 3}
   m_PrefabInstance: {fileID: 1663072073736324897}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3235821115080034588 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4319964785868328509, guid: 7f090f4ecbcddb940bafd019f8597844, type: 3}
+  m_PrefabInstance: {fileID: 1663072073736324897}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3370814861075915591 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4166922006713115750, guid: 7f090f4ecbcddb940bafd019f8597844, type: 3}
@@ -458,7 +463,7 @@ PrefabInstance:
     - target: {fileID: 523031376187392792, guid: e8d0eb763f9630740b37543138767304, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 4830483877759818914}
+      objectReference: {fileID: 3235821115080034588}
     - target: {fileID: 523031376187392792, guid: e8d0eb763f9630740b37543138767304, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
@@ -560,11 +565,6 @@ RectTransform:
 --- !u!1 &4227685001187385672 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 672270012240268167, guid: e8d0eb763f9630740b37543138767304, type: 3}
-  m_PrefabInstance: {fileID: 3746892739925502671}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4830483877759818914 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8139957698429974125, guid: e8d0eb763f9630740b37543138767304, type: 3}
   m_PrefabInstance: {fileID: 3746892739925502671}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &7103813088821803094 stripped
